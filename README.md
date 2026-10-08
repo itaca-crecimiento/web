@@ -1,0 +1,85 @@
+# Ítaca Crecimiento
+
+Web de Ítaca Crecimiento, consultoría especializada en ICO Crecimiento, el préstamo directo del ICO para pymes. Es una página única y estática, hecha a partir del handoff de diseño `design_handoff_itaca_web`.
+
+## Estructura
+
+- `index.html`: la página completa, con el HTML, el CSS y el JS incluidos.
+- `guias/`: guías de referencia (una carpeta por guía).
+- `blog/`: artículos fechados (una carpeta por artículo).
+- `assets/blog/`: foto de portada de cada artículo (`<slug>.webp`) y su versión para redes (`<slug>-og.jpg`, 1200×630). Para un artículo nuevo, añade sus dos imágenes y su entrada en `IMAGENES` dentro de `gen_blog.py`.
+- `herramientas/gen_guias.py` (con las guías de `herramientas/guias_nuevas.py`) y `herramientas/gen_blog.py`: generan las guías y el blog a partir de una plantilla común (usan `assets/legal.css` y `assets/guias.css`). Para añadir un artículo, añade una entrada a `POSTS` en `gen_blog.py` y ejecuta `python3 herramientas/gen_blog.py .` desde la raíz. Después añade la URL a `sitemap.xml` y a `llms.txt`.
+- `assets/fonts/`: tipografías servidas desde la propia web (más rápido y sin enviar datos a Google). Licencias en `OFL-*.txt`.
+- `test-ico-crecimiento/`: test de 8 preguntas para saber si una empresa puede pedir ICO Crecimiento. Envía a Formspree los datos de contacto junto con el resultado y las respuestas.
+- `404.html`: página que muestra GitHub Pages cuando un enlace no existe.
+- `favicon.ico`, `favicon.svg`, `favicon-96x96.png`, `apple-touch-icon.png` y `site.webmanifest`: el icono de la web (el que muestra Google junto al resultado y el navegador en la pestaña).
+- `assets/og-image.jpg`: imagen de 1200×630 que se muestra al compartir la web en WhatsApp o redes.
+- `llms.txt`: resumen de la web para asistentes de IA (ChatGPT, Perplexity, Gemini…).
+- `aviso-legal.html`, `privacidad.html` y `cookies.html`: las páginas legales, que usan los estilos de `assets/legal.css`.
+- `assets/velero.avif`: la foto del hero.
+- `assets/logo/`: los logos oficiales (horizontal, horizontal-azul, monocromo, símbolo, vertical e icono). El icono se usa también como favicon.
+
+## Ver en local
+
+```bash
+python3 -m http.server 8000
+# abre http://localhost:8000
+```
+
+## Formulario de contacto
+
+El formulario envía las consultas a Formspree (`https://formspree.io/f/myezlpqe`, en el atributo `data-endpoint` del `<form id="contact-form">`), que las reenvía a `general@itacacrecimiento.com`. El campo del correo se llama `email` para que, al pulsar Responder, la respuesta vaya a quien escribió. Si se deja `data-endpoint` vacío, al enviar se abre el programa de correo del visitante con la consulta ya redactada.
+
+## Pendiente de confirmar
+
+- El plazo de respuesta de 48 horas laborables.
+- Las condiciones de ICO Crecimiento (portada, guía y `llms.txt`): comprobarlas en ico.es y actualizarlas si cambian.
+- Si se añade analítica u otras cookies no técnicas, actualiza `cookies.html` y pon un banner de consentimiento.
+
+## Google Search Console
+
+- `robots.txt` permite rastrear toda la web e indica dónde está el sitemap.
+- `sitemap.xml` lista la página principal y las guías. Las páginas legales no se incluyen porque llevan `noindex`.
+- La portada y las guías llevan datos estructurados (schema.org): empresa, preguntas frecuentes, artículos y migas de pan.
+- `index.html` declara `https://itacacrecimiento.com/` como dirección canónica.
+
+Al añadir páginas nuevas, inclúyelas en `sitemap.xml` y actualiza su `lastmod`.
+
+## Publicar en GitHub Pages
+
+1. Si el repositorio es privado, GitHub Pages solo funciona con un plan de pago (GitHub Pro o superior). Con el plan gratuito, haz el repositorio público en Settings → General → Danger Zone → Change visibility.
+2. En Settings → Pages, elige Source: **Deploy from a branch**, la rama con la web y la carpeta **/ (root)**, y pulsa Save.
+3. En uno o dos minutos la web estará en `https://<usuario>.github.io/<repositorio>/`.
+
+El archivo `.nojekyll` hace que GitHub sirva los archivos tal cual, sin procesarlos con Jekyll.
+
+### Dominio propio: itacacrecimiento.com
+
+El archivo `CNAME` indica a GitHub Pages que la web se sirve en `itacacrecimiento.com`. En el panel DNS del proveedor del dominio hay que crear estos registros:
+
+| Tipo | Nombre | Valor |
+|---|---|---|
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| AAAA | @ | 2606:50c0:8000::153 |
+| AAAA | @ | 2606:50c0:8001::153 |
+| AAAA | @ | 2606:50c0:8002::153 |
+| AAAA | @ | 2606:50c0:8003::153 |
+| CNAME | www | itaca-crecimiento.github.io |
+
+- Borra cualquier otro registro A, AAAA o CNAME que ya exista para `@` o `www` (por ejemplo, la página de aparcamiento del proveedor).
+- **No toques los registros MX ni TXT del correo**, o dejará de funcionar `general@itacacrecimiento.com`.
+- Cuando los DNS se hayan propagado (de minutos a 24 horas), marca **Enforce HTTPS** en Settings → Pages.
+- Recomendado: verifica el dominio en la configuración de tu cuenta de GitHub (Settings → Pages → Add a domain) para que nadie más pueda usarlo en GitHub Pages.
+
+## Artículos programados
+
+`gen_blog.py` solo publica los artículos cuya `fecha` ya ha llegado; los de fecha futura quedan programados (se listan al ejecutarlo). Para publicar el que toca, ejecuta `python3 herramientas/gen_blog.py .` ese día, que también actualiza `sitemap.xml` y `llms.txt`, y haz commit y push.
+
+## Automatización (GitHub Actions)
+
+- `.github/workflows/publicar-blog.yml`: cada día a las 06:00 UTC ejecuta `gen_blog.py` y, si algún artículo programado ya ha llegado a su fecha, lo publica (commit y push automáticos). También se puede lanzar a mano desde la pestaña Actions → "Publicar artículos programados" → Run workflow.
+- `.github/workflows/auditoria-seo.yml`: cada lunes audita la web publicada con `herramientas/seo_audit.py` (title, description, H1, canonical, schema, noindex, enlaces rotos). Si hay un problema grave, el job falla y GitHub avisa por correo. El informe se descarga como artefacto del job.
+- Los title se generan con `titulo_seo()`: la marca solo se añade si cabe en los ~60 caracteres que muestra Google. Mantén `seo` por debajo de 60 caracteres y `desc` por debajo de 160.

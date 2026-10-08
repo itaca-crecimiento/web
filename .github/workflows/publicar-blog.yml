@@ -1,0 +1,35 @@
+# Publica cada mañana los artículos del blog cuya fecha ya ha llegado.
+# Regenera el blog, el sitemap y llms.txt, y hace commit solo si algo cambia.
+name: Publicar artículos programados
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # 06:00 UTC (08:00 en España en verano, 07:00 en invierno)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generar blog
+        env:
+          TZ: Europe/Madrid
+        run: python herramientas/gen_blog.py .
+      - name: Commit y push si hay artículos nuevos
+        run: |
+          if git diff --quiet; then
+            echo "Nada que publicar hoy."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A blog sitemap.xml llms.txt feed.xml
+          git commit -m "Publica los artículos programados para $(TZ=Europe/Madrid date +%F)"
+          git push

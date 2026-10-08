@@ -1,0 +1,27 @@
+# Auditoría SEO semanal de la web publicada. Si encuentra problemas graves
+# (páginas caídas, noindex, enlaces rotos, falta de title) el job falla y
+# GitHub envía un correo al propietario del repositorio. El informe completo
+# queda como artefacto descargable en la pestaña Actions.
+name: Auditoría SEO semanal
+
+on:
+  schedule:
+    - cron: "0 7 * * 1"   # lunes a las 07:00 UTC
+  workflow_dispatch:
+
+jobs:
+  auditoria:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Auditar itacacrecimiento.com
+        run: python herramientas/seo_audit.py https://itacacrecimiento.com
+      - name: Guardar informe
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: auditoria-seo
+          path: herramientas/informes/
