@@ -23,6 +23,7 @@ jobs:
           TZ: Europe/Madrid
         run: python herramientas/gen_blog.py .
       - name: Commit y push si hay artículos nuevos
+        id: commit
         run: |
           if git diff --quiet; then
             echo "Nada que publicar hoy."
@@ -33,3 +34,9 @@ jobs:
           git add -A blog sitemap.xml llms.txt feed.xml
           git commit -m "Publica los artículos programados para $(TZ=Europe/Madrid date +%F)"
           git push
+          echo "publicado=si" >> "$GITHUB_OUTPUT"
+      - name: Avisar a Bing/Copilot con IndexNow
+        if: steps.commit.outputs.publicado == 'si'
+        run: |
+          sleep 90  # espera a que GitHub Pages despliegue
+          python herramientas/indexnow.py || true
