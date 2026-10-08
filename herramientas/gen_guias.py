@@ -251,6 +251,15 @@ cuerpo="""
 
 <h2>ICO Crecimiento DANA</h2>
 <p>Las empresas de los municipios afectados por la DANA de 2024 tienen una modalidad propia, con aval público gratuito del 80 % y sin comisiones. Lo explicamos en la guía de <a href="../ico-crecimiento-dana/">ICO Crecimiento DANA</a>.</p>
+
+<h2>Antes de solicitar: lo que conviene leer</h2>
+<ul>
+  <li><a href="../../blog/cuanto-cuesta-ico-crecimiento/">Cuánto cuesta ICO Crecimiento</a>: tipo, comisiones y un ejemplo completo.</li>
+  <li><a href="../../blog/por-que-deniegan-ico-crecimiento/">Por qué deniegan ICO Crecimiento</a>: los filtros de solvencia del ICO.</li>
+  <li><a href="../../blog/ico-crecimiento-o-prestamo-bancario/">ICO Crecimiento o préstamo bancario</a>: cuál conviene a tu pyme.</li>
+  <li><a href="../como-solicitar-un-prestamo-ico/">Cómo solicitar un préstamo ICO paso a paso</a> y <a href="../../blog/errores-al-solicitar-ico-crecimiento/">los 9 errores más frecuentes</a>.</li>
+  <li><a href="../consultora-ico-crecimiento/">¿Necesitas una consultora o te basta con los asesores del ICO?</a></li>
+</ul>
 """,
 faqs=[
 ("¿Qué es ICO Crecimiento?", "Es la línea de financiación directa del ICO para pymes: la solicitud se presenta en la plataforma ICO Online y es el propio ICO quien analiza y concede el préstamo, sin banco intermediario."),
@@ -441,7 +450,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from guias_nuevas import NUEVAS
 GUIAS.extend(NUEVAS)
 
-ORDEN = ["ico-crecimiento", "ico-crecimiento-circulante", "aval-sgr", "cuestionario-sostenibilidad-ico-crecimiento",
+ORDEN = ["ico-crecimiento", "consultora-ico-crecimiento", "consultora-ico-crecimiento", "ico-crecimiento-circulante", "aval-sgr", "cuestionario-sostenibilidad-ico-crecimiento",
          "ico-crecimiento-dana", "novedades-ico-crecimiento", "documentacion-prestamo-ico", "como-solicitar-un-prestamo-ico",
          "circulante-empresas-agroalimentarias", "circulante-distribucion-mayoristas",
          "circulante-construccion-instaladoras", "circulante-empresas-industriales"]

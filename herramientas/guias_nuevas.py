@@ -377,14 +377,29 @@ slug="novedades-ico-crecimiento",
 titulo="Novedades de ICO Crecimiento",
 seo="Novedades de ICO Crecimiento 2026: últimos cambios",
 desc="Los cambios y noticias de la línea ICO Crecimiento ordenados por fecha: lanzamiento, modalidad DANA, cuestionario de sostenibilidad y estado actual de la línea.",
-resumen="""<p>Recogemos aquí, por fecha, los cambios relevantes de la línea ICO Crecimiento. A <strong>2 de octubre de 2026</strong>:</p>
+resumen="""<p>Recogemos aquí, por fecha, los cambios y los datos públicos de la línea ICO Crecimiento. A <strong>8 de octubre de 2026</strong>:</p>
 <ul>
   <li>La línea sigue <strong>abierta</strong> hasta el 31 de diciembre de 2027 o hasta agotar el presupuesto.</li>
   <li>Las solicitudes se atienden <strong>por orden de presentación</strong>.</li>
   <li>El DCG vigente incluye la <strong>modalidad DANA</strong> y la <strong>evaluación de sostenibilidad</strong> con Plan de Remediación.</li>
+  <li>El ICO ha recibido <strong>más de 3.000 solicitudes</strong> (dato de julio de 2026). En diciembre de 2025, a los cuatro meses del lanzamiento, ya sumaban 1.200 por más de 1.000 millones de euros, el importe de la dotación inicial.</li>
 </ul>""",
 cuerpo="""
 <p class="note">Página actualizada periódicamente por Ítaca Crecimiento. Las fuentes son el Documento de Condiciones Generales de la línea y las comunicaciones públicas del ICO y del Gobierno. Comprueba siempre la información vigente en <a href="https://www.ico.es" rel="noopener">www.ico.es</a>.</p>
+
+<h2>Datos de la línea ICO Crecimiento</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Fecha</th><th>Dato</th><th>Fuente</th></tr></thead>
+  <tbody>
+    <tr><td>Septiembre de 2025</td><td>Lanzamiento con una dotación inicial de 1.000 millones de euros, solicitudes hasta el 31/12/2027 y 21 asesores territoriales del ICO</td><td><a href="https://www.ico.es/web/ico_en/the-government-launches-ico-crecimiento-ico-s-first-100-digital-direct-financing-tool-for-spanish-smes-with-growth-and-job-creation-potential" rel="noopener">ICO</a></td></tr>
+    <tr><td>Diciembre de 2025</td><td>1.200 solicitudes por más de 1.000 millones de euros en cuatro meses, según el ministro de Economía</td><td><a href="https://capital.es/empresas/la-linea-ico-crecimiento-recibe-1-200-solicitudes-por-mas-de-1-000-millones-en-solo-cuatro-meses/158824" rel="noopener">Capital</a>, <a href="https://forbes.es/economia/848119/la-linea-ico-crecimiento-recibe-en-apenas-4-meses-1-200-peticiones-por-1-000-millones-segun-cuerpo/" rel="noopener">Forbes</a></td></tr>
+    <tr><td>Marzo de 2026</td><td>Acuerdo entre el ICO y Avalmadrid para avalar operaciones de ICO Crecimiento; el ICO se apoya en las SGR para empresas sin cuentas auditadas</td><td><a href="https://www.eldiariodemadrid.es/articulo/empresas/ico-avalmadrid-acuerdo-financiacion-digital-pymes-2026/20260312115339124134.html" rel="noopener">El Diario de Madrid</a></td></tr>
+    <tr><td>Julio de 2026</td><td>Más de 3.000 solicitudes; entre los sectores destacados, construcción industrializada de vivienda, digitalización, atención a mayores y transición energética</td><td><a href="https://www.autonomosyemprendedor.es/articulo/pymes/mas-3000-pymes-han-solicitado-prestamos-avalados-nueva-linea-ico-crecimiento/20260701163631054706.html" rel="noopener">Autónomos y Emprendedor</a></td></tr>
+  </tbody>
+</table>
+</div>
+<p>El ICO no publica el importe concedido ni la tasa de aprobación. Con el volumen de solicitudes, lo que sí importa es <strong>presentar pronto y completo</strong>: la línea se atiende por orden de llegada y cada requerimiento retrasa la operación.</p>
 
 <h2>Octubre de 2026: situación de la línea</h2>
 <p>ICO Crecimiento sigue admitiendo solicitudes. El plazo termina el <strong>31 de diciembre de 2027</strong>, salvo que antes se agote el presupuesto. Si eso ocurre, el ICO publicará en su web la fecha de cierre. Como las solicitudes se atienden por orden de presentación, no conviene esperar al final.</p>
@@ -409,6 +424,78 @@ cuerpo="""
 """,
 faqs=[
 ("¿Sigue abierta la línea ICO Crecimiento?", "Sí. A 2 de octubre de 2026 sigue admitiendo solicitudes, con plazo hasta el 31 de diciembre de 2027 o hasta que se agote el presupuesto. Las solicitudes se atienden por orden de presentación."),
+("¿Cuántas empresas han pedido ICO Crecimiento?", "Según los datos públicos, el ICO había recibido más de 3.000 solicitudes en julio de 2026. En diciembre de 2025, a los cuatro meses del lanzamiento, eran 1.200 por más de 1.000 millones de euros. El ICO no publica el importe concedido ni la tasa de aprobación."),
 ("¿Cuándo se lanzó ICO Crecimiento?", "Se presentó el 5 de septiembre de 2025, con una dotación inicial de 1.000 millones de euros, como la primera línea de financiación directa y 100 % digital del ICO para pymes."),
+],
+))
+
+# ---------------------------------------------------------------- ¿consultora o asesores del ICO?
+NUEVAS.append(dict(
+slug="consultora-ico-crecimiento",
+titulo="¿Necesitas una consultora para pedir ICO Crecimiento?",
+corto="¿Consultora o asesores del ICO?",
+seo="¿Consultora para ICO Crecimiento? Cuándo compensa",
+desc="Puedes pedir ICO Crecimiento tú mismo y el ICO tiene 21 asesores gratuitos. Qué hace cada uno, cuándo compensa una consultora y cuánto cuesta.",
+resumen="""<p><strong>No es obligatorio.</strong> Cualquier pyme puede presentar ICO Crecimiento por su cuenta en ICO Online, y el ICO tiene <strong>21 asesores territoriales</strong> que orientan gratis sobre la línea.</p>
+<ul>
+  <li>Una consultora compensa cuando la empresa <strong>no tiene tiempo o equipo financiero</strong> para preparar el expediente, el plan de crecimiento y el cuestionario ASG, y para contestar los requerimientos del ICO en <strong>5 días hábiles</strong>.</li>
+  <li>También cuando hay que coordinar un <strong>aval de SGR</strong> porque las cuentas no están auditadas.</li>
+  <li>Los gastos de consultoría necesarios para la solicitud son <strong>financiables hasta el 100 %</strong> dentro del propio préstamo.</li>
+  <li>En Ítaca cobramos una parte fija y una <strong>parte variable que solo se paga si el ICO aprueba</strong> el préstamo.</li>
+</ul>""",
+cuerpo=NOTA_DCG + """
+
+<h2>Las tres formas de pedir ICO Crecimiento</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th></th><th>Por tu cuenta</th><th>Con los asesores del ICO</th><th>Con una consultora</th></tr></thead>
+  <tbody>
+    <tr><td>Coste</td><td>0 €</td><td>0 €</td><td>Honorarios (financiables en el préstamo)</td></tr>
+    <tr><td>Información sobre la línea y requisitos</td><td>Web y DCG del ICO</td><td>Sí</td><td>Sí</td></tr>
+    <tr><td>Estudio previo de viabilidad y del importe</td><td>Lo haces tú</td><td>Orientación general</td><td>Sí, con tus cuentas y tu CIRBE</td></tr>
+    <tr><td>Preparación del expediente y del plan de crecimiento</td><td>Lo haces tú</td><td>Orientan; el expediente lo prepara la empresa</td><td>Lo preparamos contigo</td></tr>
+    <tr><td>Cuestionario de sostenibilidad (ASG)</td><td>Lo haces tú</td><td>Orientan</td><td>Lo preparamos contigo</td></tr>
+    <tr><td>Coordinación del aval de SGR</td><td>Lo gestionas tú</td><td>Orientan</td><td>Lo coordinamos</td></tr>
+    <tr><td>Respuesta a requerimientos (5 días hábiles)</td><td>Tú</td><td>Tú</td><td>La preparamos contigo</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Los asesores del ICO son una buena opción para resolver dudas y confirmar que la línea encaja. Lo que no hacen es preparar el expediente por la empresa: la solicitud, las cifras y la memoria siguen siendo responsabilidad de quien solicita.</p>
+
+<h2>Cuándo te recomendamos hacerlo tú</h2>
+<ul>
+  <li>Tienes un director financiero o una gestoría que conoce bien tus cuentas y tiempo para dedicarle.</li>
+  <li>Cumples con holgura todos los requisitos: cuentas auditadas, sin pérdidas, patrimonio neto positivo, CIRBE limpia.</li>
+  <li>El proyecto es sencillo de explicar: por ejemplo, circulante para un crecimiento de ventas ya visible.</li>
+</ul>
+<p>Si es tu caso, empieza por el <a href="../../test-ico-crecimiento/">test de requisitos</a> y la <a href="../como-solicitar-un-prestamo-ico/">guía paso a paso</a>.</p>
+
+<h2>Cuándo compensa una consultora</h2>
+<ul>
+  <li><strong>No tienes cuentas auditadas</strong> y hay que tramitar un <a href="../aval-sgr/">aval de SGR</a>.</li>
+  <li>La empresa está <strong>cerca de algún límite</strong>: rating, endeudamiento o resultados ajustados. Lo explicamos en <a href="../../blog/por-que-deniegan-ico-crecimiento/">por qué deniegan ICO Crecimiento</a>.</li>
+  <li>Necesitas <strong>combinar circulante e inversión</strong> o justificar intangibles (software, I+D, marca).</li>
+  <li>No puedes garantizar una respuesta a los requerimientos en <strong>5 días hábiles</strong>: si no se contestan, la solicitud se da por desistida.</li>
+  <li>Te importa el plazo: la línea se concede por <strong>orden de llegada</strong> y cada requerimiento retrasa la operación. Los fallos más habituales están en <a href="../../blog/errores-al-solicitar-ico-crecimiento/">9 errores al solicitar ICO Crecimiento</a>.</li>
+</ul>
+
+<h2>Cuánto cuesta una consultora y cómo detectar una buena</h2>
+<p>La mayoría de consultoras no publican sus honorarios. Antes de contratar, pide por escrito:</p>
+<ol class="pasos-guia">
+  <li><strong>El precio total</strong>, separando la parte fija y la variable, y cuándo se paga cada una.</li>
+  <li><strong>Si la parte variable depende de la aprobación.</strong> Si cobra igual aunque el ICO deniegue, el riesgo es todo tuyo.</li>
+  <li><strong>Qué incluye</strong>: estudio previo, expediente, ASG, aval de SGR, requerimientos y firma.</li>
+  <li><strong>Que no te garantice la concesión.</strong> Nadie puede: la decisión es siempre del ICO.</li>
+</ol>
+<p>Recuerda que los gastos de consultoría y calificación crediticia necesarios para solicitar el préstamo son financiables hasta el 100 %: pueden ir dentro de la operación. Lo detallamos con números en <a href="../../blog/cuanto-cuesta-ico-crecimiento/">cuánto cuesta ICO Crecimiento</a>.</p>
+
+<h2>Cómo trabajamos en Ítaca Crecimiento</h2>
+<p>Hacemos primero un <strong>estudio gratuito</strong> con tus cuentas. Si la operación no es viable, te lo decimos y no cobramos nada. Si seguimos, nuestros honorarios tienen una parte fija y una parte variable que <strong>solo se paga si el ICO aprueba el préstamo</strong>. Todo el detalle está en <a href="../../asesoria-ico-crecimiento/">nuestro servicio</a>.</p>
+""",
+faqs=[
+("¿Es obligatorio contratar una consultora para pedir ICO Crecimiento?", "No. La empresa puede presentar la solicitud por su cuenta en ICO Online con su certificado digital o Cl@ve. Una consultora prepara el expediente, el plan de crecimiento, el cuestionario de sostenibilidad y las respuestas a los requerimientos, pero no es un requisito."),
+("¿Qué hacen los asesores territoriales del ICO?", "El ICO dispone de 21 asesores comerciales repartidos por España que informan gratis sobre la línea y orientan a las empresas durante la solicitud. La preparación del expediente y la documentación siguen siendo responsabilidad de la empresa solicitante."),
+("¿Se pueden incluir los honorarios de la consultora en el préstamo ICO Crecimiento?", "Sí. Las condiciones de la línea consideran financiables, hasta el 100 %, los gastos de consultoría y calificación crediticia necesarios para solicitar el préstamo."),
+("¿Cuánto cobra una consultora por tramitar ICO Crecimiento?", "Depende de la consultora y pocas publican precios. Lo habitual es una parte fija y una parte variable a éxito. En Ítaca Crecimiento el estudio inicial es gratuito y la parte variable solo se paga si el ICO aprueba el préstamo."),
 ],
 ))
