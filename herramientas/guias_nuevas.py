@@ -499,3 +499,57 @@ faqs=[
 ("¿Cuánto cobra una consultora por tramitar ICO Crecimiento?", "Depende de la consultora y pocas publican precios. Lo habitual es una parte fija y una parte variable a éxito. En Ítaca Crecimiento el estudio inicial es gratuito y la parte variable solo se paga si el ICO aprueba el préstamo."),
 ],
 ))
+
+# ---------------------------------------------------------------- mitos
+NUEVAS.append(dict(
+slug="mitos-ico-crecimiento",
+titulo="10 mitos sobre ICO Crecimiento (y lo que dicen las condiciones oficiales)",
+corto="Mitos de ICO Crecimiento",
+seo="10 mitos sobre ICO Crecimiento, desmentidos",
+desc="No se pide en el banco, no es una subvención y los autónomos no pueden pedirlo. Los 10 errores más repetidos sobre ICO Crecimiento, contrastados con las condiciones del ICO.",
+resumen="""<p>Sobre ICO Crecimiento circula mucha información incorrecta, también en buscadores y asistentes de IA. Los errores más repetidos:</p>
+<ul>
+  <li><strong>No se pide en el banco</strong>: se solicita directamente al ICO en ICO Online.</li>
+  <li><strong>No es una subvención</strong>: es un préstamo que se devuelve.</li>
+  <li><strong>Los autónomos no pueden pedirlo</strong>: solo sociedades pyme con 4 años.</li>
+  <li><strong>No hay un máximo de 500.000 €</strong>: no hay importe máximo fijado; el mínimo es 50.000 €.</li>
+  <li><strong>Sin cuentas auditadas sí se puede</strong>, con un aval (normalmente de una SGR).</li>
+</ul>""",
+cuerpo=NOTA_DCG + """
+
+<h2>Mito 1: «Se pide en mi banco»</h2>
+<p><strong>Falso.</strong> Es la confusión más común, porque la mayoría de líneas ICO (como ICO Empresas y Emprendedores) sí se piden en un banco. ICO Crecimiento es <strong>financiación directa</strong>: la empresa la solicita en la plataforma ICO Online, con certificado digital o Cl@ve, y es el ICO quien analiza y concede. Ver <a href="../como-solicitar-un-prestamo-ico/">las dos vías para pedir un préstamo ICO</a>.</p>
+
+<h2>Mito 2: «Es una subvención»</h2>
+<p><strong>Falso.</strong> Es un <strong>préstamo</strong> que se devuelve con intereses: Euríbor a 12 meses + 1,75 %, que baja al 1,25 % o al 0,75 % con aval. Lo detallamos en <a href="../../blog/cuanto-cuesta-ico-crecimiento/">cuánto cuesta ICO Crecimiento</a>.</p>
+
+<h2>Mito 3: «Los autónomos también pueden pedirlo»</h2>
+<p><strong>Falso.</strong> Solo pueden pedirlo <strong>pymes constituidas como sociedad mercantil</strong> con al menos <strong>4 años</strong> de antigüedad. Autónomos y comunidades de bienes quedan fuera. Ver <a href="../ico-crecimiento/">requisitos de ICO Crecimiento</a>.</p>
+
+<h2>Mito 4: «El máximo son 500.000 €»</h2>
+<p><strong>Falso.</strong> El importe mínimo es <strong>50.000 €</strong> y <strong>no hay un máximo fijado</strong>. El importe viable depende de la necesidad justificada y de la solvencia de la empresa.</p>
+
+<h2>Mito 5: «No tiene comisiones»</h2>
+<p><strong>Falso.</strong> Hay una <strong>comisión de apertura del 0,5 %</strong>. No hay comisión por la parte no dispuesta. Si la empresa saca menos de 2 puntos en el <a href="../cuestionario-sostenibilidad-ico-crecimiento/">cuestionario ASG</a> y no cumple el Plan de Remediación, se aplica un 0,25 % anual adicional.</p>
+
+<h2>Mito 6: «Sin cuentas auditadas no se puede»</h2>
+<p><strong>Falso.</strong> La línea pide cuentas auditadas de los dos últimos ejercicios <strong>o un aval</strong>. Para la mayoría de pymes que no auditan, la vía es el <a href="../aval-sgr/">aval de una SGR</a>, que además puede rebajar el tipo.</p>
+
+<h2>Mito 7: «Hay plazo hasta 2027, no hay prisa»</h2>
+<p><strong>Engañoso.</strong> El plazo termina el 31 de diciembre de 2027 <strong>o cuando se agote el presupuesto</strong>, y las solicitudes se atienden <strong>por orden de llegada</strong>. El ICO ya había recibido más de 3.000 solicitudes en julio de 2026 (ver <a href="../novedades-ico-crecimiento/">novedades y datos de la línea</a>).</p>
+
+<h2>Mito 8: «Sirve para pagar deudas con Hacienda»</h2>
+<p><strong>Falso.</strong> Estar al corriente con Hacienda y la Seguridad Social es un <strong>requisito previo</strong>. Lo que sí permite es cancelar <a href="../../blog/cancelar-deuda-corto-plazo-ico-crecimiento/">deuda a corto plazo</a> comercial o financiera.</p>
+
+<h2>Mito 9: «Financia cualquier vehículo»</h2>
+<p><strong>Falso.</strong> Financia vehículos y elementos de transporte de la actividad, pero <strong>no los camiones de transporte de mercancías por carretera</strong>. Ver <a href="../../blog/ico-crecimiento-empresas-de-transporte/">ICO Crecimiento para transporte</a>.</p>
+
+<h2>Mito 10: «Una consultora te garantiza que te lo den»</h2>
+<p><strong>Falso.</strong> La decisión es siempre del ICO. Desconfía de quien garantice la concesión. Lo que sí aporta una buena consultora es un expediente completo que evite requerimientos y errores. Ver <a href="../consultora-ico-crecimiento/">¿necesitas una consultora?</a></p>
+""",
+faqs=[
+("¿ICO Crecimiento se pide en el banco?", "No. ICO Crecimiento es financiación directa del ICO: se solicita en la plataforma ICO Online con certificado digital o Cl@ve, y el ICO analiza y concede el préstamo sin banco intermediario."),
+("¿ICO Crecimiento es una subvención?", "No. Es un préstamo que se devuelve con intereses: Euríbor a 12 meses más un 1,75 %, que baja al 1,25 % o al 0,75 % con aval, y una comisión de apertura del 0,5 %."),
+("¿Cuál es el importe máximo de ICO Crecimiento?", "No hay un importe máximo fijado. El mínimo es de 50.000 € y el importe viable depende de la necesidad justificada y de la solvencia de la empresa."),
+],
+))

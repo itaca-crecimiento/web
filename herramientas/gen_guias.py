@@ -450,7 +450,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from guias_nuevas import NUEVAS
 GUIAS.extend(NUEVAS)
 
-ORDEN = ["ico-crecimiento", "consultora-ico-crecimiento", "consultora-ico-crecimiento", "ico-crecimiento-circulante", "aval-sgr", "cuestionario-sostenibilidad-ico-crecimiento",
+ORDEN = ["ico-crecimiento", "consultora-ico-crecimiento", "mitos-ico-crecimiento", "consultora-ico-crecimiento", "ico-crecimiento-circulante", "aval-sgr", "cuestionario-sostenibilidad-ico-crecimiento",
          "ico-crecimiento-dana", "novedades-ico-crecimiento", "documentacion-prestamo-ico", "como-solicitar-un-prestamo-ico",
          "circulante-empresas-agroalimentarias", "circulante-distribucion-mayoristas",
          "circulante-construccion-instaladoras", "circulante-empresas-industriales"]

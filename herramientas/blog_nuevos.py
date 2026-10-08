@@ -549,3 +549,284 @@ faqs=[
 ("¿Puedo cancelar un leasing con ICO Crecimiento?", "Normalmente no. En circulante, la línea solo permite cancelar deuda a corto plazo, y un leasing de maquinaria suele ser a largo plazo."),
 ],
 ))
+
+# ------------------------------------------------------------------ autónomos
+NUEVOS.append(dict(
+slug="ico-crecimiento-autonomos",
+fecha="2026-10-27",
+titulo="¿Puede un autónomo pedir ICO Crecimiento? Respuesta y alternativas",
+seo="¿Puede un autónomo pedir ICO Crecimiento? No, y alternativas",
+desc="ICO Crecimiento es solo para sociedades pyme con 4 años de antigüedad: un autónomo no puede pedirlo. Por qué, qué pasa si creas una SL y qué alternativas hay.",
+resumen="""<p><strong>No.</strong> ICO Crecimiento solo admite <strong>sociedades mercantiles pyme</strong> (SL, SA…) con al menos <strong>4 años de antigüedad</strong>. Los autónomos y las comunidades de bienes no pueden ser beneficiarios.</p>
+<ul>
+  <li>Crear ahora una sociedad <strong>no sirve</strong> para pedirlo: la antigüedad exigida es la de la sociedad que solicita.</li>
+  <li>Si eres autónomo, las alternativas son las <strong>líneas ICO de mediación</strong> que se piden en el banco, el aval de una SGR o la financiación bancaria tradicional.</li>
+  <li>Si tu negocio ya funciona como sociedad desde hace 4 años o más, entonces sí puede encajar.</li>
+</ul>""",
+cuerpo=NOTA_DCG + """
+<h2>Por qué un autónomo no puede pedirlo</h2>
+<p>Las condiciones de ICO Crecimiento definen como beneficiarias a las <strong>pymes constituidas como sociedad mercantil</strong>, con actividad en España y con al menos cuatro años de antigüedad. Además, piden cuentas anuales de los dos últimos ejercicios, auditadas o respaldadas por un aval. Un autónomo no deposita cuentas anuales en el Registro Mercantil, así que no encaja en la estructura de la línea.</p>
+<p>Esta es una de las confusiones más habituales, también en las respuestas de los asistentes de IA. Muchas líneas ICO <em>sí</em> admiten autónomos, como ICO Empresas y Emprendedores, y es fácil generalizar. ICO Crecimiento no es una de ellas.</p>
+
+<h2>¿Y si creo una sociedad?</h2>
+<p>Para esta línea no resuelve el problema a corto plazo. La antigüedad mínima de cuatro años se refiere a la <strong>sociedad que presenta la solicitud</strong>. Una SL recién constituida no la cumple, aunque el negocio lleve años funcionando como autónomo. Convertirse en sociedad puede tener sentido por otros motivos (fiscalidad, responsabilidad, crecimiento), pero consúltalo con tu asesor fiscal y no lo plantees solo para pedir ICO Crecimiento.</p>
+
+<h2>Alternativas si eres autónomo</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Opción</th><th>Cómo se pide</th><th>Para qué encaja</th></tr></thead>
+  <tbody>
+    <tr><td>Líneas ICO de mediación (por ejemplo, ICO Empresas y Emprendedores)</td><td>En tu banco, si está adherido</td><td>Inversión y liquidez, con condiciones fijadas por el ICO; decide el banco</td></tr>
+    <tr><td>Aval de una SGR</td><td>En la SGR de tu comunidad autónoma</td><td>Conseguir un préstamo bancario que solo no te darían, o en mejores condiciones</td></tr>
+    <tr><td>Préstamo o póliza bancaria</td><td>En tu banco</td><td>Necesidades puntuales; plazos más cortos</td></tr>
+    <tr><td>Ayudas autonómicas</td><td>En el organismo de tu comunidad</td><td>Depende de la convocatoria vigente</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Explicamos la diferencia entre las líneas que se piden en el banco y ICO Crecimiento en <a href="../../guias/como-solicitar-un-prestamo-ico/">cómo solicitar un préstamo ICO paso a paso</a>, y cómo funciona una SGR en nuestra <a href="../../guias/aval-sgr/">guía del aval de SGR</a>.</p>
+
+<h2>Si tu negocio ya es una sociedad</h2>
+<p>Si facturas a través de una SL o SA con cuatro años o más, ICO Crecimiento puede ser una opción muy interesante: hasta 5 años para circulante o 10 para inversión, sin pasar por el banco. Comprueba en un minuto si cumples el resto de requisitos con nuestro <a href="../../test-ico-crecimiento/">test gratuito</a>.</p>
+""",
+faqs=[
+("¿Un autónomo puede pedir ICO Crecimiento?", "No. ICO Crecimiento solo admite pymes constituidas como sociedad mercantil, con actividad en España y al menos cuatro años de antigüedad. Los autónomos y las comunidades de bienes no pueden ser beneficiarios."),
+("Si constituyo una SL, ¿puedo pedir ICO Crecimiento?", "No de inmediato: la antigüedad mínima de cuatro años se exige a la sociedad que solicita, así que una SL recién creada no la cumple aunque el negocio venga de antes."),
+("¿Qué préstamos ICO puede pedir un autónomo?", "Las líneas ICO de mediación, como ICO Empresas y Emprendedores, que se solicitan en un banco adherido. En ellas es el banco quien analiza y decide."),
+],
+))
+
+# ------------------------------------------------------------------ requerimientos
+NUEVOS.append(dict(
+slug="requerimientos-ico-crecimiento",
+fecha="2026-10-30",
+titulo="Requerimientos del ICO en ICO Crecimiento: el plazo de 5 días hábiles",
+seo="Requerimientos de ICO Crecimiento: plazo de 5 días hábiles",
+desc="Tras solicitar ICO Crecimiento, el ICO puede pedir documentos o aclaraciones. Hay 5 días hábiles para responder o la solicitud se da por desistida. Cómo prepararse.",
+resumen="""<p>Durante el análisis, el ICO puede enviar <strong>requerimientos</strong>: peticiones de documentos o aclaraciones sobre la solicitud.</p>
+<ul>
+  <li>Hay <strong>5 días hábiles</strong> para contestarlos.</li>
+  <li>Si no se contestan, <strong>o si la notificación electrónica no se abre</strong> en ese plazo, la solicitud se da por <strong>desistida</strong>.</li>
+  <li>Si te lo deniegan o desistes, puedes volver a presentarla, pero <strong>entras al final de la cola</strong>, que se atiende por orden de llegada.</li>
+  <li>La mejor defensa es un expediente completo desde el primer día.</li>
+</ul>""",
+cuerpo=NOTA_DCG + """
+<h2>Qué es un requerimiento</h2>
+<p>Una vez presentada la solicitud en ICO Online, el analista del ICO revisa la documentación y la información financiera. Si falta algo o algo no cuadra, envía un requerimiento a través de la plataforma: por ejemplo, unas cuentas de otro ejercicio, el detalle de una partida, la explicación de una caída de ventas o información adicional sobre el proyecto. El ICO puede incluso encargar un informe a un experto independiente.</p>
+
+<h2>El plazo: 5 días hábiles</h2>
+<p>Según las condiciones de la línea, los requerimientos se contestan en <strong>5 días hábiles</strong>. Si no se atienden en ese plazo, o si la notificación electrónica no se abre, la solicitud se da por <strong>desistida</strong>. Es uno de los motivos más tontos, y más evitables, por los que se pierde una operación.</p>
+<p>Cinco días hábiles es poco tiempo si el documento que piden lo tiene la gestoría, el auditor o el banco, o si coincide con unas vacaciones.</p>
+
+<h2>Cómo prepararse</h2>
+<ol class="pasos-guia">
+  <li><strong>Designa a un responsable</strong> que revise ICO Online y el correo cada día mientras dure el análisis.</li>
+  <li><strong>Ten a mano el «paquete de respaldo»</strong>: cuentas de los últimos ejercicios, impuestos, informe CIRBE reciente, pool bancario, detalle de la deuda y presupuestos de la inversión. La lista está en nuestra <a href="../../guias/documentacion-prestamo-ico/">guía de documentación</a>.</li>
+  <li><strong>Haz que las cifras cuadren</strong> entre la memoria, las cuentas y las previsiones. La mayoría de requerimientos nacen de incoherencias.</li>
+  <li><strong>Explica de antemano lo que llamará la atención</strong>: un año flojo, una deuda alta o un cambio de actividad. Mejor contarlo en la memoria que esperar a que lo pregunten.</li>
+  <li><strong>Evita presentar justo antes de vacaciones</strong> si no vas a poder responder.</li>
+</ol>
+
+<h2>Si la solicitud se da por desistida o se deniega</h2>
+<p>No cabe recurso administrativo, pero se puede presentar una nueva solicitud una vez corregidos los defectos. El problema es el tiempo: la nueva solicitud entra al final de la cola. Con más de 3.000 solicitudes recibidas (dato de julio de 2026, ver <a href="../../guias/novedades-ico-crecimiento/">novedades</a>), cada vuelta atrás cuenta. Lo explicamos en <a href="../por-que-deniegan-ico-crecimiento/">por qué deniegan ICO Crecimiento</a> y en <a href="../errores-al-solicitar-ico-crecimiento/">los 9 errores más frecuentes</a>.</p>
+""",
+faqs=[
+("¿Cuánto tiempo hay para responder a un requerimiento del ICO?", "Cinco días hábiles. Si no se responde en ese plazo, o si la notificación electrónica no se abre, la solicitud de ICO Crecimiento se da por desistida."),
+("¿Qué pasa si mi solicitud de ICO Crecimiento se da por desistida?", "Se puede presentar una nueva solicitud una vez corregidos los defectos, pero entra al final de la cola, que se atiende por orden de llegada."),
+("¿Qué suele pedir el ICO en un requerimiento?", "Documentos que faltan o aclaraciones sobre la información financiera y el proyecto: cuentas, detalle de deuda, explicación de variaciones o información adicional sobre la inversión o el circulante."),
+],
+))
+
+# ------------------------------------------------------------------ software e intangibles
+NUEVOS.append(dict(
+slug="ico-crecimiento-software-intangibles",
+fecha="2026-11-03",
+titulo="ICO Crecimiento para software, I+D e intangibles: qué se puede financiar",
+seo="ICO Crecimiento para software, I+D e intangibles",
+desc="ICO Crecimiento financia intangibles (software, I+D, marca, formación, nuevos mercados) hasta el 80 % a 10 años con 2 de carencia. Qué entra y cómo justificarlo.",
+resumen="""<p>Los <strong>intangibles</strong> son una de las grandes diferencias de ICO Crecimiento frente al préstamo bancario: la línea se pensó para empresas viables cuyo valor está en activos que un banco no acepta como garantía.</p>
+<ul>
+  <li>Financia <strong>software, desarrollo tecnológico, I+D, marcas, formación y apertura de nuevos mercados</strong>.</li>
+  <li>Como inversión: <strong>hasta el 80 %</strong>, a <strong>hasta 10 años con 2 de carencia</strong>.</li>
+  <li>Se pueden incluir gastos realizados en los <strong>12 meses anteriores</strong> a la solicitud.</li>
+  <li>La clave es explicar <strong>qué retorno genera</strong> el intangible y cómo se devolverá el préstamo.</li>
+</ul>""",
+cuerpo=NOTA_DCG + """
+<h2>Por qué los intangibles encajan en ICO Crecimiento</h2>
+<p>El ICO presentó la línea como una herramienta para pymes con potencial de crecimiento que tienen difícil la financiación bancaria, entre otras razones, por su <strong>perfil innovador o por invertir en intangibles</strong>. Un banco suele pedir garantías sobre lo que financia, y un software a medida o una marca no sirven de garantía. El ICO, en cambio, analiza la viabilidad del proyecto y la capacidad de devolución de la empresa.</p>
+
+<h2>Qué se puede financiar</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Intangible</th><th>Ejemplos</th></tr></thead>
+  <tbody>
+    <tr><td>Software y digitalización</td><td>ERP, desarrollo de una plataforma propia, comercio electrónico, automatización</td></tr>
+    <tr><td>I+D y desarrollo tecnológico</td><td>Desarrollo de nuevos productos o procesos</td></tr>
+    <tr><td>Marca y propiedad industrial</td><td>Registro y desarrollo de marca</td></tr>
+    <tr><td>Formación</td><td>Capacitación del equipo vinculada al proyecto</td></tr>
+    <tr><td>Nuevos mercados</td><td>Apertura comercial en nuevas zonas o canales</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Si el proyecto necesita además más equipo o más stock, se puede combinar inversión y <a href="../../guias/ico-crecimiento-circulante/">circulante</a> en la misma solicitud. Tienes más ejemplos en <a href="../que-se-puede-financiar-con-ico-crecimiento/">qué se puede financiar con ICO Crecimiento</a>.</p>
+
+<h2>Ejemplo orientativo</h2>
+<p><em>Ejemplo ilustrativo, no es un cliente real.</em> Una empresa de servicios factura 2,5 millones de euros, tiene beneficios y quiere invertir 300.000 € en una plataforma propia que automatice su operación. ICO Crecimiento podría financiar hasta el 80 % (240.000 €) a 10 años, con 2 de carencia mientras la plataforma se desarrolla y empieza a dar resultados. La empresa aporta el 20 % restante. Si parte de la inversión se pagó en los 12 meses anteriores, también puede incluirse.</p>
+
+<h2>Cómo justificarlo bien</h2>
+<ul>
+  <li><strong>Presupuestos detallados</strong> de proveedores o del equipo interno (horas y coste).</li>
+  <li><strong>El retorno esperado</strong>: ahorro de costes, nuevas ventas o margen, con cifras.</li>
+  <li><strong>El calendario</strong>: cuándo se desarrolla y cuándo empieza a generar caja, que es la base para pedir la carencia.</li>
+  <li><strong>Coherencia con las cuentas</strong>: si la inversión se activa como inmovilizado intangible, cómo y cuándo.</li>
+</ul>
+<p>Recuerda que hay que cumplir los filtros de solvencia: <a href="../por-que-deniegan-ico-crecimiento/">rating mínimo, sin pérdidas y CIRBE limpia</a>.</p>
+""",
+faqs=[
+("¿ICO Crecimiento financia software?", "Sí. La línea financia intangibles como software, desarrollo tecnológico, I+D, marcas, formación o apertura de nuevos mercados, como inversión de hasta el 80 % a un plazo de hasta 10 años con hasta 2 de carencia."),
+("¿Puedo financiar con ICO Crecimiento un software que ya pagué?", "Se pueden incluir inversiones y gastos realizados o iniciados en los 12 meses anteriores a la solicitud, siempre que se justifiquen."),
+("¿Necesito garantías para financiar intangibles con ICO Crecimiento?", "La línea no se basa en garantías sobre el activo, sino en la viabilidad del proyecto y la solvencia de la empresa. Si las cuentas no están auditadas, hará falta un aval, normalmente de una SGR."),
+],
+))
+
+# ------------------------------------------------------------------ ENISA
+NUEVOS.append(dict(
+slug="ico-crecimiento-o-enisa",
+fecha="2026-11-06",
+titulo="ICO Crecimiento o ENISA: diferencias y cuál encaja con tu empresa",
+seo="ICO Crecimiento o ENISA: diferencias y cuál te conviene",
+desc="ICO Crecimiento es un préstamo ordinario para pymes con 4 años y beneficios; ENISA, un préstamo participativo para empresas innovadoras. Diferencias y cuándo elegir cada uno.",
+resumen="""<p>Las dos son financiación pública para pymes sin pasar por el banco, pero sirven a empresas distintas:</p>
+<ul>
+  <li><strong>ICO Crecimiento</strong>: préstamo ordinario del ICO para <strong>sociedades con al menos 4 años</strong>, sin pérdidas y con capacidad de devolución. Circulante e inversión.</li>
+  <li><strong>ENISA</strong>: <strong>préstamo participativo</strong> para empresas innovadoras, incluidas jóvenes, con un interés que depende en parte de los resultados.</li>
+  <li>En general: empresa consolidada y rentable → ICO Crecimiento; empresa innovadora en fase temprana → ENISA.</li>
+</ul>""",
+cuerpo=NOTA_DCG + """
+<h2>Qué es cada una</h2>
+<p><strong>ICO Crecimiento</strong> es la línea de financiación directa del Instituto de Crédito Oficial para pymes viables con potencial de crecimiento: desde 50.000 €, circulante hasta 5 años e inversión hasta 10, con un tipo de Euríbor + 1,75 % que baja con aval. Se pide en ICO Online. Todos los detalles están en nuestra <a href="../../guias/ico-crecimiento/">guía de ICO Crecimiento</a>.</p>
+<p><strong>ENISA</strong> (Empresa Nacional de Innovación, del Ministerio de Industria) concede <strong>préstamos participativos</strong>: un tipo de préstamo a medio camino entre la deuda y el capital, normalmente sin avales personales, con un interés en parte fijo y en parte ligado a la rentabilidad de la empresa. Se dirige a pymes con proyectos innovadores, incluidas empresas jóvenes. Consulta las líneas y condiciones vigentes en <a href="https://www.enisa.es" rel="noopener">enisa.es</a>.</p>
+
+<h2>Comparativa</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th></th><th>ICO Crecimiento</th><th>ENISA</th></tr></thead>
+  <tbody>
+    <tr><td>Tipo de préstamo</td><td>Ordinario</td><td>Participativo</td></tr>
+    <tr><td>Antigüedad</td><td>Sociedad con al menos 4 años</td><td>Admite empresas jóvenes, según la línea</td></tr>
+    <tr><td>Resultados</td><td>Sin pérdidas en los dos últimos ejercicios</td><td>Se valora el proyecto innovador y el plan de negocio</td></tr>
+    <tr><td>Interés</td><td>Euríbor + 1,75 % (menos con aval)</td><td>Tramo fijo más un tramo variable según resultados</td></tr>
+    <tr><td>Finalidad</td><td>Circulante e inversión, incluidos intangibles</td><td>Proyectos de crecimiento e innovación</td></tr>
+    <tr><td>Fondos propios</td><td>Patrimonio neto positivo</td><td>Suele exigir fondos propios en proporción al préstamo</td></tr>
+    <tr><td>Dónde se pide</td><td>ICO Online</td><td>Web de ENISA</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note">Las condiciones de ENISA varían según la línea y la convocatoria. Compruébalas siempre en su web oficial.</p>
+
+<h2>Cuándo elegir cada una</h2>
+<ul>
+  <li><strong>ICO Crecimiento</strong> si la empresa tiene trayectoria, gana dinero y necesita circulante o inversión a largo plazo, incluidos <a href="../ico-crecimiento-software-intangibles/">software e intangibles</a>.</li>
+  <li><strong>ENISA</strong> si es una empresa innovadora que aún no cumple los requisitos de antigüedad o de resultados de ICO Crecimiento, o si prefiere un préstamo cuyo coste dependa en parte de los resultados.</li>
+  <li>Combinar ambas puede ser posible si el proyecto lo justifica. Analízalo caso por caso, porque cada línea tiene sus límites y compatibilidades.</li>
+</ul>
+<p>Si dudas, el <a href="../../test-ico-crecimiento/">test de requisitos</a> te dice en un minuto si encajas en ICO Crecimiento.</p>
+""",
+faqs=[
+("¿Qué diferencia hay entre ICO Crecimiento y ENISA?", "ICO Crecimiento es un préstamo ordinario para sociedades pyme con al menos cuatro años, sin pérdidas y con capacidad de devolución. ENISA concede préstamos participativos a empresas innovadoras, incluidas jóvenes, con un interés en parte ligado a los resultados."),
+("¿Una startup puede pedir ICO Crecimiento?", "Solo si es una sociedad con al menos cuatro años de antigüedad y cumple el resto de requisitos. Para empresas innovadoras más jóvenes, ENISA suele encajar mejor."),
+("¿Se pueden pedir ICO Crecimiento y ENISA a la vez?", "Puede ser posible si el proyecto lo justifica, pero hay que revisar los límites y compatibilidades de cada línea en sus condiciones vigentes."),
+],
+))
+
+# ------------------------------------------------------------------ renovables
+NUEVOS.append(dict(
+slug="ico-crecimiento-placas-solares-autoconsumo",
+fecha="2026-11-10",
+titulo="ICO Crecimiento para placas solares y autoconsumo en la empresa",
+seo="ICO Crecimiento para placas solares y autoconsumo",
+desc="ICO Crecimiento financia instalaciones de renovables para autoconsumo como inversión: hasta el 80 % a 10 años con 2 de carencia. Cómo plantearlo y qué tener en cuenta.",
+resumen="""<p>Las <strong>instalaciones de energías renovables para autoconsumo</strong>, como las placas solares en la cubierta de la nave, están entre las inversiones que financia ICO Crecimiento.</p>
+<ul>
+  <li>Como inversión: <strong>hasta el 80 %</strong>, a <strong>hasta 10 años con 2 de carencia</strong>.</li>
+  <li>El ahorro en la factura eléctrica ayuda a <strong>justificar la devolución</strong>.</li>
+  <li>El ICO cita la <strong>transición energética</strong> entre los sectores que más solicitudes generan.</li>
+  <li>El IVA recuperable no se financia y hay que adelantarlo.</li>
+</ul>""",
+cuerpo=NOTA_DCG + """
+<h2>Por qué encaja</h2>
+<p>Una instalación de autoconsumo tiene un perfil muy adecuado para ICO Crecimiento: es una inversión con un <strong>ahorro medible</strong> desde el primer mes, una vida útil larga y un retorno que suele cubrir buena parte de la cuota. Con un plazo de hasta 10 años, el ahorro puede igualar o superar lo que se paga cada mes. En julio de 2026 el ICO destacó la transición energética entre los sectores más presentes en las solicitudes (ver <a href="../../guias/novedades-ico-crecimiento/">novedades</a>).</p>
+
+<h2>Ejemplo orientativo</h2>
+<p><em>Ejemplo ilustrativo con cifras redondas, no es un cliente real.</em> Una industria invierte 180.000 € en una instalación fotovoltaica en su cubierta. ICO Crecimiento podría financiar hasta el 80 % (144.000 €) a 10 años con 1 o 2 de carencia. La empresa aporta el 20 % y el IVA, que recupera después. Si la instalación ahorra, por ejemplo, 2.000 € al mes en electricidad, ese ahorro es el argumento central de la memoria: demuestra que la inversión se paga sola.</p>
+
+<h2>Qué conviene preparar</h2>
+<ul>
+  <li><strong>Presupuesto del instalador</strong> con potencia, equipos y plazos.</li>
+  <li><strong>Estudio de ahorro</strong> basado en el consumo real de la empresa (facturas de los últimos 12 meses).</li>
+  <li><strong>Licencias y permisos</strong> previstos.</li>
+  <li><strong>Encaje con el resto del proyecto de crecimiento</strong>: la línea valora el crecimiento y el empleo, no solo el ahorro.</li>
+</ul>
+
+<h2>Lo que hay que tener en cuenta</h2>
+<ul>
+  <li>Hay que cumplir los requisitos generales: sociedad con 4 años, sin pérdidas, patrimonio neto positivo y CIRBE limpia. Revisa <a href="../por-que-deniegan-ico-crecimiento/">los filtros del ICO</a>.</li>
+  <li>Si la instalación ya está pagada, se pueden incluir gastos de los <strong>12 meses anteriores</strong> a la solicitud.</li>
+  <li>Las ayudas públicas recibidas para la misma instalación deben declararse; lo explicamos en el artículo sobre <a href="../ayudas-de-minimis-ico-crecimiento/">ayudas de minimis</a>.</li>
+  <li>Compara con un leasing o renting energético: lo analizamos en <a href="../ico-crecimiento-o-leasing-maquinaria/">ICO Crecimiento o leasing</a>.</li>
+</ul>
+""",
+faqs=[
+("¿ICO Crecimiento financia placas solares?", "Sí. Las instalaciones de energías renovables para autoconsumo están entre las inversiones financiables, hasta el 80 % a un plazo de hasta 10 años con hasta 2 de carencia."),
+("¿Puedo financiar con ICO Crecimiento una instalación solar que ya hice?", "Se pueden incluir inversiones realizadas o iniciadas en los 12 meses anteriores a la solicitud, siempre que se justifiquen."),
+("¿Se financia el IVA de la instalación?", "No se financia el IVA que la empresa puede recuperar: hay que adelantarlo y se recupera en las declaraciones."),
+],
+))
+
+# ------------------------------------------------------------------ factoring y confirming
+NUEVOS.append(dict(
+slug="ico-crecimiento-o-factoring-confirming",
+fecha="2026-11-13",
+titulo="ICO Crecimiento, factoring o confirming: cómo financiar el circulante",
+seo="ICO Crecimiento, factoring o confirming para el circulante",
+desc="Factoring y confirming financian facturas concretas a corto plazo; ICO Crecimiento financia la necesidad estable de circulante a 5 años. Diferencias y cuándo usar cada uno.",
+resumen="""<p>Las tres herramientas financian circulante, pero resuelven problemas distintos:</p>
+<ul>
+  <li><strong>Factoring</strong>: adelanta el cobro de facturas a clientes. Corto plazo, factura a factura.</li>
+  <li><strong>Confirming</strong>: el banco paga a tus proveedores y tú le pagas después. Corto plazo.</li>
+  <li><strong>ICO Crecimiento</strong>: un préstamo de <strong>hasta 5 años con 1 de carencia</strong> para la <strong>parte estable</strong> del circulante, la que siempre necesitas para crecer.</li>
+  <li>Lo habitual es combinarlas: ICO Crecimiento para la base y factoring o confirming para los picos.</li>
+</ul>""",
+cuerpo=NOTA_DCG + """
+<h2>Tres herramientas, tres problemas</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th></th><th>Factoring</th><th>Confirming</th><th>ICO Crecimiento (circulante)</th></tr></thead>
+  <tbody>
+    <tr><td>Qué financia</td><td>Facturas emitidas a clientes</td><td>Pagos a proveedores</td><td>La necesidad de circulante del negocio</td></tr>
+    <tr><td>Plazo</td><td>Días o meses (lo que tarda en cobrarse la factura)</td><td>Días o meses</td><td>Hasta 5 años, con hasta 1 de carencia</td></tr>
+    <tr><td>Quién decide</td><td>Banco o entidad de factoring</td><td>Banco</td><td>El ICO</td></tr>
+    <tr><td>Consume riesgo bancario</td><td>Sí</td><td>Sí</td><td>No con tus bancos</td></tr>
+    <tr><td>Coste</td><td>Comisión + interés por factura</td><td>Normalmente sin coste para quien paga; el proveedor paga si adelanta</td><td>Euríbor + 1,75 % (menos con aval), comisión de apertura del 0,5 %</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>El error típico: financiar una necesidad estable con herramientas de corto plazo</h2>
+<p>Cuando una empresa crece, necesita <strong>de forma permanente</strong> más stock y más crédito a clientes. Si eso se cubre solo con factoring, confirming y pólizas, la empresa vive renovando líneas cada año y depende de que el banco no las recorte. ICO Crecimiento permite pasar esa base estable a un préstamo de 5 años e, incluso, <a href="../cancelar-deuda-corto-plazo-ico-crecimiento/">cancelar deuda a corto plazo</a>.</p>
+
+<h2>Ejemplo orientativo</h2>
+<p><em>Ejemplo ilustrativo, no es un cliente real.</em> Una distribuidora cobra a 90 días y paga a 30. Al crecer un 25 %, su necesidad de circulante sube 300.000 € y la cubre con factoring a coste creciente. Con ICO Crecimiento podría financiar esos 300.000 € a 5 años con 1 de carencia y dejar el factoring solo para los meses de más ventas. Lo desarrollamos en la guía de <a href="../../guias/circulante-distribucion-mayoristas/">circulante para distribución</a>.</p>
+
+<h2>Cuándo usar cada una</h2>
+<ul>
+  <li><strong>ICO Crecimiento</strong>: para la necesidad de circulante que se mantiene en el tiempo, si la empresa cumple los <a href="../../guias/ico-crecimiento/">requisitos</a>.</li>
+  <li><strong>Factoring</strong>: para picos de facturación o clientes grandes que pagan tarde.</li>
+  <li><strong>Confirming</strong>: para ordenar los pagos a proveedores y negociar plazos.</li>
+</ul>
+""",
+faqs=[
+("¿Es mejor ICO Crecimiento o factoring para el circulante?", "Depende de la necesidad. El factoring adelanta facturas concretas a corto plazo; ICO Crecimiento financia la necesidad estable de circulante con un préstamo de hasta 5 años y 1 de carencia, sin consumir líneas bancarias. Muchas empresas combinan ambos."),
+("¿Puedo cancelar líneas de factoring con ICO Crecimiento?", "ICO Crecimiento permite destinar el circulante a cancelar deuda a corto plazo de naturaleza comercial y financiera. Conviene analizar qué parte de la financiación a corto es estable y cuál es estacional."),
+("¿ICO Crecimiento consume riesgo con mis bancos?", "No: es un préstamo directo del ICO, así que no utiliza tus líneas bancarias, aunque aparecerá en la CIRBE como cualquier otra deuda."),
+],
+))
