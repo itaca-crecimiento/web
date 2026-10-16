@@ -337,7 +337,7 @@ def page(depth, url, title, desc, current, body, jsonld, og_type="article", og_i
     <a href="{up}" aria-label="Ítaca Crecimiento, volver al inicio">
       {LOGO}
     </a>
-    <a class="back" href="{up}#contacto">Solicitar ICO Crecimiento →</a>
+    <a class="back" href="{up}test-ico-crecimiento/">Haz el test gratuito →</a>
   </div>
 </header>
 
@@ -367,7 +367,7 @@ def page(depth, url, title, desc, current, body, jsonld, og_type="article", og_i
 CTA = '''
     <aside class="cta">
       <h2>¿Quieres solicitar ICO Crecimiento?</h2>
-      <p>Empezamos con un <strong>estudio gratuito y sin compromiso</strong>: si la operación es viable y cuánto conviene pedir. Si decides seguir, preparamos el expediente completo y te acompañamos en ICO Online hasta la firma. <strong>La parte variable de nuestros honorarios solo se paga si el ICO aprueba el préstamo.</strong></p>
+      <p>Empezamos con un <strong>estudio gratuito y sin compromiso</strong>: si la operación es viable y cuánto conviene pedir. Si decides seguir, preparamos el expediente completo y hacemos el seguimiento en ICO Online hasta la resolución. <strong>La parte variable de nuestros honorarios solo se paga si el ICO aprueba el préstamo.</strong></p>
       <a class="btn" href="{up}test-ico-crecimiento/">Haz el test de requisitos (1 minuto)</a>
       <p style="font-size:14px">O <a href="{up}#contacto" style="color:var(--cream);text-decoration:underline">escríbenos directamente</a> · <a href="{up}asesoria-ico-crecimiento/" style="color:var(--cream);text-decoration:underline">cómo trabajamos y honorarios</a>.</p>
     </aside>'''

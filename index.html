@@ -41,7 +41,7 @@
     "https://www.linkedin.com/company/itaca-crecimiento/"
   ],
   "image": "https://itacacrecimiento.com/assets/og-image.jpg",
-  "description": "Consultoría independiente especializada en ICO Crecimiento, el préstamo directo del Instituto de Crédito Oficial para pymes: comprobación de requisitos, preparación del expediente y acompañamiento en la solicitud en ICO Online hasta la firma.",
+  "description": "Consultoría independiente especializada en ICO Crecimiento, el préstamo directo del Instituto de Crédito Oficial para pymes: comprobación de requisitos, preparación del expediente y seguimiento de la solicitud en ICO Online hasta la resolución.",
   "slogan": "Te ayudamos a solicitar tu préstamo ICO Crecimiento.",
   "email": "general@itacacrecimiento.com",
   "address": {
@@ -602,12 +602,12 @@
     </button>
     <div class="nav-links" id="nav-links">
       <a href="#ico-crecimiento">ICO Crecimiento</a>
-      <a href="test-ico-crecimiento/" class="nav-test">Test gratuito</a>
-      <a href="asesoria-ico-crecimiento/">Servicio</a>
+            <a href="asesoria-ico-crecimiento/">Servicio</a>
       <a href="guias/">Guías</a>
       <a href="blog/">Blog</a>
       <a href="#preguntas">Preguntas</a>
-      <a class="btn-nav" href="#contacto">Contactar</a>
+      <a href="#contacto">Contacto</a>
+      <a class="btn-nav" href="test-ico-crecimiento/">Test gratuito</a>
     </div>
   </nav>
 
@@ -615,10 +615,9 @@
     <div class="hero-text">
       <p class="eyebrow">Especialistas en ICO Crecimiento</p>
       <h1>Te ayudamos a solicitar tu préstamo ICO Crecimiento.</h1>
-      <p class="hero-lead">El préstamo directo del ICO para pymes, sin banco intermediario: para el circulante del día a día o para invertir en crecer. Preparamos tu solicitud en ICO Online de principio a fin y te acompañamos hasta la firma.</p>
+      <p class="hero-lead">El préstamo directo del ICO para pymes, sin banco intermediario: para el circulante del día a día o para invertir en crecer. Preparamos tu solicitud en ICO Online de principio a fin y hacemos el seguimiento hasta la resolución.</p>
       <div class="hero-ctas">
         <a class="btn-primary" href="test-ico-crecimiento/">¿Puede tu empresa pedirlo? Haz el test</a>
-        <a class="btn-outline" href="#contacto">Hablar con nosotros</a>
       </div>
       <p class="hero-test-note">8 preguntas · 1 minuto · gratis y sin registro. Después, un estudio de viabilidad gratuito. Y la parte variable de nuestros honorarios, solo si el ICO lo aprueba.</p>
     </div>
@@ -782,7 +781,9 @@
       <div>
         <p class="eyebrow">Contacto</p>
         <h2 class="h2" id="contacto-title">¿Puede tu empresa pedir ICO Crecimiento?</h2>
-        <p class="contacto-lead">Cuéntanos tu proyecto. Te hacemos un <strong>estudio gratuito y sin compromiso</strong>: si la operación es viable y cuánto conviene pedir. Te respondemos en un plazo de 48 horas laborables.</p>
+        <p class="contacto-lead">Si aún no sabes si tu empresa cumple los requisitos, <strong>empieza por el test</strong>: 8 preguntas, 1 minuto, y al final puedes pedirnos el estudio gratuito sin repetir tus datos.</p>
+        <p style="margin:24px 0 8px"><a class="btn-primary" href="test-ico-crecimiento/" style="display:inline-block">Hacer el test gratuito</a></p>
+        <p class="contacto-lead" style="margin-top:24px">¿Ya lo has comprobado o tienes una duda concreta? Escríbenos con el formulario y te respondemos en 48 horas laborables.</p>
         <div class="datos">
           <div class="dato"><span class="label">Correo</span><a id="contact-email" href="mailto:general@itacacrecimiento.com">general@itacacrecimiento.com</a></div>
         </div>
@@ -829,6 +830,7 @@
           </select>
         </label>
         <label class="field full">Proyecto o necesidad<textarea id="f-proyecto" name="proyecto" rows="3"></textarea></label>
+        <p class="form-error" id="form-antiguedad" role="alert" hidden>ICO Crecimiento exige que la empresa tenga al menos 4 años de antigüedad, así que ahora mismo no puede solicitarlo. Podrás pedirlo cuando la empresa cumpla 4 años desde su constitución.</p>
         <p class="form-error" id="form-error" role="alert" hidden></p>
         <div class="form-foot">
           <span>Tus datos se usan solo para responder a esta consulta. Más información en la <a href="privacidad.html" style="text-decoration:underline;color:inherit">política de privacidad</a>.</span>
@@ -908,6 +910,13 @@
     var submit = form.querySelector('.btn-submit');
     var email = document.getElementById('contact-email').textContent.trim();
 
+    var antig = document.getElementById('f-antiguedad');
+    var avisoAntig = document.getElementById('form-antiguedad');
+    function menos4() { return antig.value === 'Menos de 4 años'; }
+    function checkAntig() { avisoAntig.hidden = !menos4(); submit.disabled = menos4(); }
+    antig.addEventListener('change', checkAntig);
+    checkAntig();
+
     function showError(msg) { error.textContent = msg; error.hidden = false; }
     function done(msg) {
       if (msg) sentMsg.textContent = msg;
@@ -918,6 +927,7 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       error.hidden = true;
+      if (menos4()) { checkAntig(); return; }
       if (!form.checkValidity()) {
         var bad = form.querySelector(':invalid');
         showError(bad && bad.type === 'email' && bad.value
@@ -936,7 +946,7 @@
           .then(function (r) {
             if (!r.ok) throw new Error();
             // Conversión de Google Ads: solo cuando el envío ha llegado bien
-            try { if (typeof gtag === 'function') gtag('event', 'conversion', {'send_to': 'AW-18496340494/ZFZhCNrV85IdEI6E3_NE'}); gtag('event', 'generate_lead', {'form_name': 'contacto'}); } catch (e) {}
+            try { if (typeof gtag === 'function') gtag('event', 'conversion', {'send_to': 'AW-18496340494/QsroCIDg654dEI6E3_NE'}); gtag('event', 'generate_lead', {'form_name': 'contacto'}); } catch (e) {}
             done();
           })
           .catch(function () {

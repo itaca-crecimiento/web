@@ -334,7 +334,17 @@
 
     var box = document.getElementById('veredicto');
     var estado, titulo, detalle, asunto, leadTitle;
-    if (bloqueos.length) {
+    var noPuede = a.antiguedad === 'menos4';
+    if (noPuede) {
+      box.className = 'veredicto no';
+      estado = 'No puede solicitarlo';
+      titulo = 'Tu empresa todavía no puede pedir ICO Crecimiento';
+      detalle = '<p>ICO Crecimiento exige que la empresa tenga <strong>al menos 4 años de antigüedad</strong>. Es un requisito de la línea que no se puede suplir con avales ni con otra documentación, así que ahora mismo no es posible presentar la solicitud.</p>' +
+        (bloqueos.length > 1 ? '<p>Además, según tus respuestas:</p>' + li(bloqueos.filter(function (b) { return b.indexOf('4 años') === -1; })) : '') +
+        '<p>Podrás solicitarlo cuando la empresa cumpla 4 años desde su constitución. Si la línea sigue abierta entonces, vuelve a hacer el test.</p>';
+      asunto = 'Test ICO Crecimiento: no puede (menos de 4 años)';
+      leadTitle = '';
+    } else if (bloqueos.length) {
       box.className = 'veredicto no';
       estado = 'Ahora mismo no encajas';
       titulo = 'Tu empresa no cumple algún requisito de ICO Crecimiento';
@@ -368,6 +378,8 @@
     document.getElementById('lead-subject').value = asunto;
     document.getElementById('lead-resultado').value = estado;
     document.getElementById('lead-respuestas').value = Q.map(function (n) { return TXT[n][a[n]]; }).join(' · ');
+    document.getElementById('lead-form').hidden = noPuede;
+    document.getElementById('lead-ok').hidden = true;
 
     res.hidden = false;
     res.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -400,7 +412,7 @@
       .then(function (r) {
         if (!r.ok) throw new Error();
         // Conversión de Google Ads: solo cuando el envío ha llegado bien
-        try { if (typeof gtag === 'function') gtag('event', 'conversion', {'send_to': 'AW-18496340494/ZFZhCNrV85IdEI6E3_NE'}); gtag('event', 'generate_lead', {'form_name': 'test'}); } catch (e) {}
+        try { if (typeof gtag === 'function') gtag('event', 'conversion', {'send_to': 'AW-18496340494/QsroCIDg654dEI6E3_NE'}); gtag('event', 'generate_lead', {'form_name': 'test'}); } catch (e) {}
         lead.hidden = true;
         document.getElementById('lead-ok').hidden = false;
       })

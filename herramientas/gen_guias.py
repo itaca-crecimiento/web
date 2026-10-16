@@ -537,7 +537,7 @@ def page(depth, url, title, desc, side_current, body, jsonld):
     <a href="{up}" aria-label="Ítaca Crecimiento, volver al inicio">
       {LOGO}
     </a>
-    <a class="back" href="{up}#contacto">Solicitar ICO Crecimiento →</a>
+    <a class="back" href="{up}test-ico-crecimiento/">Haz el test gratuito →</a>
   </div>
 </header>
 
@@ -572,7 +572,7 @@ PERSON = {"@type": "Person", "name": AUTOR, "worksFor": {"@id": f"{SITE}/#empres
 CTA = '''
     <aside class="cta">
       <h2>¿Quieres solicitar ICO Crecimiento?</h2>
-      <p>Empezamos con un <strong>estudio gratuito y sin compromiso</strong>: si la operación es viable y cuánto conviene pedir. Si decides seguir, preparamos el expediente completo y te acompañamos en ICO Online hasta la firma. <strong>La parte variable de nuestros honorarios solo se paga si el ICO aprueba el préstamo.</strong></p>
+      <p>Empezamos con un <strong>estudio gratuito y sin compromiso</strong>: si la operación es viable y cuánto conviene pedir. Si decides seguir, preparamos el expediente completo y hacemos el seguimiento en ICO Online hasta la resolución. <strong>La parte variable de nuestros honorarios solo se paga si el ICO aprueba el préstamo.</strong></p>
       <a class="btn" href="{up}test-ico-crecimiento/">Haz el test de requisitos (1 minuto)</a>
       <p style="font-size:14px">O <a href="{up}#contacto" style="color:var(--cream);text-decoration:underline">escríbenos directamente</a> · <a href="{up}asesoria-ico-crecimiento/" style="color:var(--cream);text-decoration:underline">cómo trabajamos y honorarios</a>.</p>
     </aside>'''
@@ -664,7 +664,7 @@ SERV_FAQ_HTML = "".join(f"\n    <h3>{q}</h3>\n    <p>{a}</p>" for q, a in SERV_F
 serv_url = f"{SITE}/asesoria-ico-crecimiento/"
 serv_body = f'''    <p class="breadcrumb"><a href="../">Inicio</a><span aria-hidden="true">/</span>Asesoría ICO Crecimiento</p>
     <h1>Asesoría para solicitar ICO Crecimiento</h1>
-    <p class="lead">Preparamos y tramitamos tu solicitud de ICO Crecimiento de principio a fin: estudio de viabilidad, expediente, presentación en ICO Online y acompañamiento hasta la firma. Para pymes de toda España, con un solo interlocutor y un estudio inicial gratuito.</p>
+    <p class="lead">Preparamos y tramitamos tu solicitud de ICO Crecimiento de principio a fin: estudio de viabilidad, expediente, presentación en ICO Online y seguimiento hasta la resolución. Para pymes de toda España, con un solo interlocutor y un estudio inicial gratuito.</p>
     <div class="resumen">
       <p class="eyebrow">En resumen</p>
       <ul>
@@ -686,7 +686,7 @@ serv_body = f'''    <p class="breadcrumb"><a href="../">Inicio</a><span aria-hid
       <li><strong>Cuestionario de sostenibilidad.</strong> Preparamos contigo las respuestas del <a href="../guias/cuestionario-sostenibilidad-ico-crecimiento/">cuestionario ASG</a> para evitar una puntuación que bloquee la operación.</li>
       <li><strong>Presentación en ICO Online.</strong> Te acompañamos al presentar la solicitud con el certificado digital de la empresa y coordinamos el aval de SGR si hace falta.</li>
       <li><strong>Requerimientos del ICO.</strong> Preparamos contigo las respuestas a las dudas y peticiones de información del ICO durante el análisis.</li>
-      <li><strong>Firma y justificación.</strong> Te acompañamos hasta la firma ante notario y en la justificación posterior del destino de los fondos.</li>
+      <li><strong>Seguimiento hasta la resolución.</strong> Atendemos los requerimientos del ICO y te informamos hasta que resuelve tu solicitud.</li>
     </ol>
 
     <h2>Honorarios: una parte fija y una variable</h2>
@@ -707,7 +707,7 @@ serv_body = f'''    <p class="breadcrumb"><a href="../">Inicio</a><span aria-hid
 serv_ld = [
     {"@context": "https://schema.org", "@type": "Service", "name": "Asesoría para solicitar ICO Crecimiento",
      "serviceType": "Consultoría de financiación pública para pymes", "url": serv_url,
-     "description": "Estudio de viabilidad gratuito, preparación del expediente, presentación en ICO Online y acompañamiento hasta la firma del préstamo ICO Crecimiento.",
+     "description": "Estudio de viabilidad gratuito, preparación del expediente, presentación en ICO Online y seguimiento hasta la resolución del préstamo ICO Crecimiento.",
      "provider": ORG, "areaServed": {"@type": "Country", "name": "España"},
      "audience": {"@type": "BusinessAudience", "audienceType": "Pymes"}},
     {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
