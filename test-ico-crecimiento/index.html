@@ -285,6 +285,16 @@
   var err = document.getElementById('test-error');
   var res = document.getElementById('resultado');
 
+  // Eventos de GA4 para ver el embudo del test: inicio, cada pregunta respondida y resultado.
+  function evento(nombre, datos) { try { if (typeof gtag === 'function') gtag('event', nombre, datos || {}); } catch (e) {} }
+  var respondidas = {};
+  test.addEventListener('change', function (e) {
+    var n = e.target && e.target.name;
+    if (Q.indexOf(n) === -1 || respondidas[n]) return;
+    if (!Object.keys(respondidas).length) evento('test_inicio');
+    respondidas[n] = true;
+    evento('test_pregunta', { pregunta: n, numero: Q.indexOf(n) + 1, respondidas: Object.keys(respondidas).length });
+  });
   function val(n) { var el = test.querySelector('input[name="' + n + '"]:checked'); return el ? el.value : null; }
   function li(items) { return items.length ? '<ul>' + items.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '</ul>' : ''; }
 
@@ -305,6 +315,7 @@
       if (!a[n]) faltan.push(n);
     });
     if (faltan.length) {
+      evento('test_incompleto', { faltan: faltan.length });
       err.textContent = 'Te falta responder ' + (faltan.length === 1 ? '1 pregunta' : faltan.length + ' preguntas') + ', marcada' + (faltan.length === 1 ? '' : 's') + ' en naranja.';
       err.hidden = false;
       test.querySelector('[data-q="' + faltan[0] + '"]').scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -372,6 +383,8 @@
       asunto = 'Test ICO Crecimiento: encaja';
       leadTitle = 'Siguiente paso: preparar tu solicitud';
     }
+    var tipo = noPuede ? 'menos_4_anos' : bloqueos.length ? 'no_encaja' : avisos.length ? 'encaja_con_condiciones' : 'encaja';
+    evento('test_resultado', { resultado: tipo, importe: a.importe, finalidad: a.finalidad });
     document.getElementById('estado').textContent = estado;
     document.getElementById('titulo-res').textContent = titulo;
     document.getElementById('detalle').innerHTML = detalle;
@@ -388,6 +401,7 @@
 
   document.getElementById('repetir').addEventListener('click', function () {
     test.reset();
+    respondidas = {};
     test.querySelectorAll('.q').forEach(function (q) { q.classList.remove('missing'); });
     res.hidden = true;
     test.scrollIntoView({ behavior: 'smooth', block: 'start' });
