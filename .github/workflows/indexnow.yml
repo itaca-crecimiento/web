@@ -1,0 +1,23 @@
+# Avisa a Bing (que alimenta ChatGPT Search y Copilot) cada vez que cambia la web.
+# Los artículos del blog ya los avisa «Publicar artículos programados»; los push hechos por
+# ese workflow no disparan este, así que no se duplica.
+name: Avisar a Bing (IndexNow)
+
+on:
+  push:
+    branches: [main]
+    paths: ["**.html", "sitemap.xml", "llms.txt"]
+  workflow_dispatch:
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Enviar las URLs del sitemap
+        run: |
+          sleep 90  # espera a que GitHub Pages despliegue
+          python herramientas/indexnow.py || true
