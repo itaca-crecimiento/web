@@ -5,82 +5,6 @@ NOTA_DCG = '<p class="note">Elaborado a partir del Documento de Condiciones Gene
 
 NUEVAS = []
 
-# ---------------------------------------------------------------- cuestionario ASG
-NUEVAS.append(dict(
-slug="cuestionario-sostenibilidad-ico-crecimiento",
-titulo="El cuestionario de sostenibilidad (ASG) de ICO Crecimiento",
-seo="Cuestionario ASG de ICO Crecimiento: cómo se puntúa",
-desc="Toda solicitud de ICO Crecimiento incluye un cuestionario ASG puntuado de 0 a 6. Qué evalúa, qué pasa si sacas menos de 2 puntos y cuánto puede costar.",
-resumen="""<p>Toda solicitud de ICO Crecimiento lleva un <strong>cuestionario de sostenibilidad</strong> sobre aspectos ambientales, sociales y de gobierno de la empresa (ASG).</p>
-<ul>
-  <li>El ICO lo puntúa de <strong>0 a 6 puntos</strong> con un sistema interno y lo tiene en cuenta al analizar la operación.</li>
-  <li>Si la empresa saca <strong>menos de 2 puntos</strong>, el contrato incluye un <strong>Plan de Remediación</strong> con mejoras concretas.</li>
-  <li>Hay <strong>24 meses</strong> desde la firma para acreditar esas mejoras.</li>
-  <li>Si no se acreditan, se aplica una comisión adicional del <strong>0,25 % anual sobre el importe firmado</strong> durante el resto del préstamo.</li>
-</ul>""",
-cuerpo=NOTA_DCG + """
-
-<h2>Qué es y dónde aparece</h2>
-<p>La memoria técnica que acompaña a la solicitud de ICO Crecimiento tiene un apartado de <strong>información de sostenibilidad</strong>: una serie de preguntas sobre cómo trabaja la empresa en tres dimensiones, la ambiental, la social y la de gobierno corporativo (lo que se conoce como criterios ASG o, en inglés, ESG).</p>
-<p>Con esas respuestas, el ICO aplica un sistema interno de puntuación (<em>scoring</em>) que da un resultado de 0 a 6 puntos. La evaluación de sostenibilidad forma parte de los aspectos que el ICO analiza antes de aprobar la financiación, junto con la solvencia, la viabilidad del proyecto y el resto de requisitos.</p>
-
-<h2>Qué pasa según la puntuación</h2>
-<div class="table-wrap">
-<table>
-  <thead><tr><th>Puntuación</th><th>Consecuencia</th></tr></thead>
-  <tbody>
-    <tr><td>2 puntos o más</td><td>Ninguna obligación adicional por este motivo</td></tr>
-    <tr><td>Menos de 2 puntos</td><td>El ICO fija un Plan de Remediación, que se incorpora al contrato de préstamo</td></tr>
-    <tr><td>Menos de 2 puntos y, a los 24 meses, mejoras acreditadas</td><td>Sin penalización</td></tr>
-    <tr><td>Menos de 2 puntos y, a los 24 meses, sin mejoras acreditadas</td><td>Comisión adicional de 25 puntos básicos (0,25 %) anual sobre el nominal firmado, cobrada mes a mes</td></tr>
-  </tbody>
-</table>
-</div>
-<p>El Plan de Remediación señala los aspectos concretos en los que la empresa podría mejorar en una o varias de las tres dimensiones. Pasados los 24 meses, el ICO hace una revisión de seguimiento con la documentación que haya enviado la empresa.</p>
-
-<h2>Cuánto puede costar no cumplirlo</h2>
-<p>La comisión se calcula sobre el <strong>importe firmado</strong>, no sobre lo que quede pendiente, y se aplica desde el mes siguiente a la comunicación del resultado del seguimiento. Por ejemplo, en un préstamo de 500.000 € serían unos 1.250 € al año. En un préstamo de inversión a 10 años, eso puede sumar bastante.</p>
-<p>Además, el seguimiento del préstamo incluye comprobar los avances en sostenibilidad: no es un trámite que se responda y se olvide.</p>
-
-<h2>Qué tipo de aspectos se valoran</h2>
-<p>Las preguntas concretas las fija el ICO en el formulario de la solicitud. A modo orientativo, estos son los temas que suelen entrar en cada dimensión en este tipo de evaluaciones:</p>
-<h3>Ambiental</h3>
-<ul>
-  <li>Control y reducción del consumo de energía y agua.</li>
-  <li>Uso de energías renovables, por ejemplo placas solares de autoconsumo.</li>
-  <li>Gestión de residuos y reciclaje.</li>
-  <li>Certificaciones ambientales, como la ISO 14001, o el cálculo de la huella de carbono.</li>
-</ul>
-<h3>Social</h3>
-<ul>
-  <li>Prevención de riesgos laborales y salud de la plantilla.</li>
-  <li>Estabilidad del empleo y formación del equipo.</li>
-  <li>Igualdad y conciliación. El plan de igualdad es obligatorio para las empresas de 50 o más trabajadores.</li>
-  <li>Relación con el entorno y la comunidad local.</li>
-</ul>
-<h3>Gobierno corporativo</h3>
-<ul>
-  <li>Código ético o de conducta.</li>
-  <li>Canal de denuncias. Es obligatorio para las empresas de 50 o más trabajadores desde la Ley 2/2023.</li>
-  <li>Cumplimiento normativo y protección de datos.</li>
-  <li>Criterios para elegir y evaluar a los proveedores.</li>
-</ul>
-
-<h2>El error más habitual: no tenerlo por escrito</h2>
-<p>Muchas pymes hacen bastantes de estas cosas, pero no las tienen documentadas: miden el consumo eléctrico pero no lo registran, forman a su equipo pero no tienen un plan, o eligen a los proveedores con criterio pero sin una política escrita. En un cuestionario que luego se puede comprobar, lo que no se puede acreditar es difícil de defender.</p>
-<p>Por eso conviene revisar la situación de la empresa <strong>antes</strong> de presentar la solicitud. A veces, poner por escrito lo que ya se hace basta para cambiar la puntuación. Y si hay que hacer mejoras, es mejor saberlo con tiempo.</p>
-
-<h2>Responde con exactitud</h2>
-<p>La solicitud incluye una declaración responsable de que todos los datos son ciertos, y el ICO puede comprobarlos. Inflar las respuestas no compensa: la puntuación queda vinculada al contrato y se revisa durante el seguimiento del préstamo.</p>
-""",
-faqs=[
-("¿Qué es el cuestionario de sostenibilidad de ICO Crecimiento?", "Es un apartado de la memoria técnica de la solicitud con preguntas sobre los aspectos ambientales, sociales y de gobierno de la empresa (ASG). El ICO lo puntúa de 0 a 6 con un sistema interno."),
-("¿Qué pasa si saco menos de 2 puntos en sostenibilidad?", "El contrato de préstamo incluirá un Plan de Remediación con mejoras concretas. La empresa tiene 24 meses desde la firma para acreditarlas. Si no lo hace, se aplica una comisión adicional del 0,25 % anual sobre el importe firmado."),
-("¿El cuestionario ASG puede hacer que me denieguen el préstamo?", "La evaluación de sostenibilidad forma parte del análisis del ICO, pero una puntuación baja no supone por sí sola la denegación: el DCG prevé para ese caso un Plan de Remediación incorporado al contrato."),
-("¿Cuánto cuesta la penalización por sostenibilidad?", "25 puntos básicos (0,25 %) anuales sobre el nominal firmado, cobrados mes a mes desde el mes siguiente a la comunicación del resultado del seguimiento. En un préstamo de 500.000 € son unos 1.250 € al año."),
-],
-))
-
 # ---------------------------------------------------------------- DANA
 NUEVAS.append(dict(
 slug="ico-crecimiento-dana",
@@ -392,7 +316,7 @@ cuerpo="""
 <table>
   <thead><tr><th>Fecha</th><th>Dato</th><th>Fuente</th></tr></thead>
   <tbody>
-    <tr><td>Septiembre de 2025</td><td>Lanzamiento con una dotación inicial de 1.000 millones de euros, solicitudes hasta el 31/12/2027 y 21 asesores territoriales del ICO</td><td><a href="https://www.ico.es/web/ico_en/the-government-launches-ico-crecimiento-ico-s-first-100-digital-direct-financing-tool-for-spanish-smes-with-growth-and-job-creation-potential" rel="noopener">ICO</a></td></tr>
+    <tr><td>Septiembre de 2025</td><td>Lanzamiento con una dotación inicial de 1.000 millones de euros, solicitudes hasta el 31/12/2027</td><td><a href="https://www.ico.es/web/ico_en/the-government-launches-ico-crecimiento-ico-s-first-100-digital-direct-financing-tool-for-spanish-smes-with-growth-and-job-creation-potential" rel="noopener">ICO</a></td></tr>
     <tr><td>Diciembre de 2025</td><td>1.200 solicitudes por más de 1.000 millones de euros en cuatro meses, según el ministro de Economía</td><td><a href="https://capital.es/empresas/la-linea-ico-crecimiento-recibe-1-200-solicitudes-por-mas-de-1-000-millones-en-solo-cuatro-meses/158824" rel="noopener">Capital</a>, <a href="https://forbes.es/economia/848119/la-linea-ico-crecimiento-recibe-en-apenas-4-meses-1-200-peticiones-por-1-000-millones-segun-cuerpo/" rel="noopener">Forbes</a></td></tr>
     <tr><td>Marzo de 2026</td><td>Acuerdo entre el ICO y Avalmadrid para avalar operaciones de ICO Crecimiento; el ICO se apoya en las SGR para empresas sin cuentas auditadas</td><td><a href="https://www.eldiariodemadrid.es/articulo/empresas/ico-avalmadrid-acuerdo-financiacion-digital-pymes-2026/20260312115339124134.html" rel="noopener">El Diario de Madrid</a></td></tr>
     <tr><td>Julio de 2026</td><td>Más de 3.000 solicitudes; entre los sectores destacados, construcción industrializada de vivienda, digitalización, atención a mayores y transición energética</td><td><a href="https://www.autonomosyemprendedor.es/articulo/pymes/mas-3000-pymes-han-solicitado-prestamos-avalados-nueva-linea-ico-crecimiento/20260701163631054706.html" rel="noopener">Autónomos y Emprendedor</a></td></tr>
@@ -413,7 +337,7 @@ cuerpo="""
 </ul>
 
 <h2>Evaluación de sostenibilidad y Plan de Remediación</h2>
-<p>El DCG vigente incorpora la evaluación de sostenibilidad: el ICO puntúa de 0 a 6 las respuestas del cuestionario ASG de la memoria técnica. Por debajo de 2 puntos se exige un Plan de Remediación con 24 meses para acreditar mejoras; si no se acreditan, se aplica una comisión adicional del 0,25 % anual sobre el importe firmado. Lo explicamos en la guía del <a href="../cuestionario-sostenibilidad-ico-crecimiento/">cuestionario de sostenibilidad</a>.</p>
+<p>El DCG vigente incorpora la evaluación de sostenibilidad: el ICO puntúa de 0 a 6 las respuestas del cuestionario ASG de la memoria técnica. Por debajo de 2 puntos se exige un Plan de Remediación con 24 meses para acreditar mejoras; si no se acreditan, se aplica una comisión adicional del 0,25 % anual sobre el importe firmado.</p>
 
 <h2>Modalidad ICO Crecimiento DANA</h2>
 <p>El DCG vigente incluye la marca ICO Crecimiento DANA, para empresas de los municipios afectados por la DANA de 2024. Incorpora el aval público gratuito del 80 % del Real Decreto-ley 6/2024, sin comisiones de apertura ni de cancelación, y un tramo con intereses subvencionados para el circulante de pymes, según disponibilidad presupuestaria. Lo explicamos en la guía de <a href="../ico-crecimiento-dana/">ICO Crecimiento DANA</a>.</p>
@@ -429,76 +353,6 @@ faqs=[
 ],
 ))
 
-# ---------------------------------------------------------------- ¿consultora o asesores del ICO?
-NUEVAS.append(dict(
-slug="consultora-ico-crecimiento",
-titulo="¿Necesitas una consultora para pedir ICO Crecimiento?",
-corto="¿Consultora o asesores del ICO?",
-seo="¿Consultora para ICO Crecimiento? Cuándo compensa",
-desc="Puedes pedir ICO Crecimiento tú mismo y el ICO tiene 21 asesores gratuitos. Qué hace cada uno, cuándo compensa una consultora y cuánto cuesta.",
-resumen="""<p><strong>No es obligatorio.</strong> Cualquier pyme puede presentar ICO Crecimiento por su cuenta en ICO Online, y el ICO tiene <strong>21 asesores territoriales</strong> que orientan gratis sobre la línea.</p>
-<ul>
-  <li>Una consultora compensa cuando la empresa <strong>no tiene tiempo o equipo financiero</strong> para preparar el expediente, el plan de crecimiento y el cuestionario ASG, y para contestar los requerimientos del ICO en <strong>5 días hábiles</strong>.</li>
-  <li>También cuando hay que coordinar un <strong>aval de SGR</strong> porque las cuentas no están auditadas.</li>
-  <li>Los gastos de consultoría necesarios para la solicitud son <strong>financiables hasta el 100 %</strong> dentro del propio préstamo.</li>
-  <li>En Ítaca cobramos una parte fija y una <strong>parte variable que solo se paga si el ICO aprueba</strong> el préstamo.</li>
-</ul>""",
-cuerpo=NOTA_DCG + """
-
-<h2>Las tres formas de pedir ICO Crecimiento</h2>
-<div class="table-wrap">
-<table>
-  <thead><tr><th></th><th>Por tu cuenta</th><th>Con los asesores del ICO</th><th>Con una consultora</th></tr></thead>
-  <tbody>
-    <tr><td>Coste</td><td>0 €</td><td>0 €</td><td>Honorarios (financiables en el préstamo)</td></tr>
-    <tr><td>Información sobre la línea y requisitos</td><td>Web y DCG del ICO</td><td>Sí</td><td>Sí</td></tr>
-    <tr><td>Estudio previo de viabilidad y del importe</td><td>Lo haces tú</td><td>Orientación general</td><td>Sí, con tus cuentas y tu CIRBE</td></tr>
-    <tr><td>Preparación del expediente y del plan de crecimiento</td><td>Lo haces tú</td><td>Orientan; el expediente lo prepara la empresa</td><td>Lo preparamos contigo</td></tr>
-    <tr><td>Cuestionario de sostenibilidad (ASG)</td><td>Lo haces tú</td><td>Orientan</td><td>Lo preparamos contigo</td></tr>
-    <tr><td>Coordinación del aval de SGR</td><td>Lo gestionas tú</td><td>Orientan</td><td>Lo coordinamos</td></tr>
-    <tr><td>Respuesta a requerimientos (5 días hábiles)</td><td>Tú</td><td>Tú</td><td>La preparamos contigo</td></tr>
-  </tbody>
-</table>
-</div>
-<p>Los asesores del ICO son una buena opción para resolver dudas y confirmar que la línea encaja. Lo que no hacen es preparar el expediente por la empresa: la solicitud, las cifras y la memoria siguen siendo responsabilidad de quien solicita.</p>
-
-<h2>Cuándo te recomendamos hacerlo tú</h2>
-<ul>
-  <li>Tienes un director financiero o una gestoría que conoce bien tus cuentas y tiempo para dedicarle.</li>
-  <li>Cumples con holgura todos los requisitos: cuentas auditadas, sin pérdidas, patrimonio neto positivo, CIRBE limpia.</li>
-  <li>El proyecto es sencillo de explicar: por ejemplo, circulante para un crecimiento de ventas ya visible.</li>
-</ul>
-<p>Si es tu caso, empieza por el <a href="../../test-ico-crecimiento/">test de requisitos</a> y la <a href="../como-solicitar-un-prestamo-ico/">guía paso a paso</a>.</p>
-
-<h2>Cuándo compensa una consultora</h2>
-<ul>
-  <li><strong>No tienes cuentas auditadas</strong> y hay que tramitar un <a href="../aval-sgr/">aval de SGR</a>.</li>
-  <li>La empresa está <strong>cerca de algún límite</strong>: rating, endeudamiento o resultados ajustados. Lo explicamos en <a href="../../blog/por-que-deniegan-ico-crecimiento/">por qué deniegan ICO Crecimiento</a>.</li>
-  <li>Necesitas <strong>combinar circulante e inversión</strong> o justificar intangibles (software, I+D, marca).</li>
-  <li>No puedes garantizar una respuesta a los requerimientos en <strong>5 días hábiles</strong>: si no se contestan, la solicitud se da por desistida.</li>
-  <li>Te importa el plazo: la línea se concede por <strong>orden de llegada</strong> y cada requerimiento retrasa la operación. Los fallos más habituales están en <a href="../../blog/errores-al-solicitar-ico-crecimiento/">9 errores al solicitar ICO Crecimiento</a>.</li>
-</ul>
-
-<h2>Cuánto cuesta una consultora y cómo detectar una buena</h2>
-<p>La mayoría de consultoras no publican sus honorarios. Antes de contratar, pide por escrito:</p>
-<ol class="pasos-guia">
-  <li><strong>El precio total</strong>, separando la parte fija y la variable, y cuándo se paga cada una.</li>
-  <li><strong>Si la parte variable depende de la aprobación.</strong> Si cobra igual aunque el ICO deniegue, el riesgo es todo tuyo.</li>
-  <li><strong>Qué incluye</strong>: estudio previo, expediente, ASG, aval de SGR, requerimientos y firma.</li>
-  <li><strong>Que no te garantice la concesión.</strong> Nadie puede: la decisión es siempre del ICO.</li>
-</ol>
-<p>Recuerda que los gastos de consultoría y calificación crediticia necesarios para solicitar el préstamo son financiables hasta el 100 %: pueden ir dentro de la operación. Lo detallamos con números en <a href="../../blog/cuanto-cuesta-ico-crecimiento/">cuánto cuesta ICO Crecimiento</a>.</p>
-
-<h2>Cómo trabajamos en Ítaca Crecimiento</h2>
-<p>Hacemos primero un <strong>estudio gratuito</strong> con tus cuentas. Si la operación no es viable, te lo decimos y no cobramos nada. Si seguimos, nuestros honorarios tienen una parte fija y una parte variable que <strong>solo se paga si el ICO aprueba el préstamo</strong>. Todo el detalle está en <a href="../../asesoria-ico-crecimiento/">nuestro servicio</a>.</p>
-""",
-faqs=[
-("¿Es obligatorio contratar una consultora para pedir ICO Crecimiento?", "No. La empresa puede presentar la solicitud por su cuenta en ICO Online con su certificado digital o Cl@ve. Una consultora prepara el expediente, el plan de crecimiento, el cuestionario de sostenibilidad y las respuestas a los requerimientos, pero no es un requisito."),
-("¿Qué hacen los asesores territoriales del ICO?", "El ICO dispone de 21 asesores comerciales repartidos por España que informan gratis sobre la línea y orientan a las empresas durante la solicitud. La preparación del expediente y la documentación siguen siendo responsabilidad de la empresa solicitante."),
-("¿Se pueden incluir los honorarios de la consultora en el préstamo ICO Crecimiento?", "Sí. Las condiciones de la línea consideran financiables, hasta el 100 %, los gastos de consultoría y calificación crediticia necesarios para solicitar el préstamo."),
-("¿Cuánto cobra una consultora por tramitar ICO Crecimiento?", "Depende de la consultora y pocas publican precios. Lo habitual es una parte fija y una parte variable a éxito. En Ítaca Crecimiento el estudio inicial es gratuito y la parte variable solo se paga si el ICO aprueba el préstamo."),
-],
-))
 
 # ---------------------------------------------------------------- mitos
 NUEVAS.append(dict(
@@ -530,7 +384,7 @@ cuerpo=NOTA_DCG + """
 <p><strong>Falso.</strong> El importe mínimo es <strong>50.000 €</strong> y <strong>no hay un máximo fijado</strong>. El importe viable depende de la necesidad justificada y de la solvencia de la empresa.</p>
 
 <h2>Mito 5: «No tiene comisiones»</h2>
-<p><strong>Falso.</strong> Hay una <strong>comisión de apertura del 0,5 %</strong>. No hay comisión por la parte no dispuesta. Si la empresa saca menos de 2 puntos en el <a href="../cuestionario-sostenibilidad-ico-crecimiento/">cuestionario ASG</a> y no cumple el Plan de Remediación, se aplica un 0,25 % anual adicional.</p>
+<p><strong>Falso.</strong> Hay una <strong>comisión de apertura del 0,5 %</strong>. No hay comisión por la parte no dispuesta. Si la empresa saca menos de 2 puntos en el cuestionario ASG y no cumple el Plan de Remediación, se aplica un 0,25 % anual adicional.</p>
 
 <h2>Mito 6: «Sin cuentas auditadas no se puede»</h2>
 <p><strong>Falso.</strong> La línea pide cuentas auditadas de los dos últimos ejercicios <strong>o un aval</strong>. Para la mayoría de pymes que no auditan, la vía es el <a href="../aval-sgr/">aval de una SGR</a>, que además puede rebajar el tipo.</p>
@@ -545,7 +399,7 @@ cuerpo=NOTA_DCG + """
 <p><strong>Falso.</strong> Financia vehículos y elementos de transporte de la actividad, pero <strong>no los camiones de transporte de mercancías por carretera</strong>. Ver <a href="../../blog/ico-crecimiento-empresas-de-transporte/">ICO Crecimiento para transporte</a>.</p>
 
 <h2>Mito 10: «Una consultora te garantiza que te lo den»</h2>
-<p><strong>Falso.</strong> La decisión es siempre del ICO. Desconfía de quien garantice la concesión. Lo que sí aporta una buena consultora es un expediente completo que evite requerimientos y errores. Ver <a href="../consultora-ico-crecimiento/">¿necesitas una consultora?</a></p>
+<p><strong>Falso.</strong> La decisión es siempre del ICO. Desconfía de quien garantice la concesión. Lo que sí aporta una buena consultora es un expediente completo que evite requerimientos y errores. Ver <a href="../../asesoria-ico-crecimiento/">cómo trabajamos</a>.</p>
 """,
 faqs=[
 ("¿ICO Crecimiento se pide en el banco?", "No. ICO Crecimiento es financiación directa del ICO: se solicita en la plataforma ICO Online con certificado digital o Cl@ve, y el ICO analiza y concede el préstamo sin banco intermediario."),

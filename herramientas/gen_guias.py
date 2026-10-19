@@ -38,7 +38,7 @@ cuerpo="""
   <li><strong>Elige la línea ICO adecuada.</strong> Cada línea tiene sus beneficiarios, finalidades, importes y plazos. Revisa las líneas vigentes en ico.es o consúltalo con un asesor.</li>
   <li><strong>Comprueba los requisitos.</strong> Por ejemplo, estar al corriente con Hacienda y la Seguridad Social, la antigüedad de la empresa o, en algunas líneas, tener cuentas auditadas.</li>
   <li><strong>Prepara la documentación.</strong> Cuentas, impuestos, deudas, certificados y la información del proyecto. Tienes la lista completa en la guía de <a href="../documentacion-prestamo-ico/">documentación para un préstamo ICO</a>.</li>
-  <li><strong>Redacta la memoria del proyecto.</strong> Explica qué vas a hacer con el dinero, por qué es viable y cómo vas a devolverlo. Algunas líneas exigen además una memoria técnica.</li>
+  <li><strong>Prepara la memoria del proyecto.</strong> Algunas líneas, como ICO Crecimiento, exigen además una memoria técnica con el formato que fija el ICO.</li>
   <li><strong>Presenta la solicitud.</strong> En tu banco (líneas de mediación) o en ICO Online (ICO Crecimiento). Puedes pedir oferta a varios bancos con el mismo expediente.</li>
   <li><strong>Responde a los requerimientos.</strong> El analista suele pedir aclaraciones o documentos adicionales. Cuanto más completo llegue el expediente, menos idas y vueltas.</li>
   <li><strong>Firma y justifica.</strong> Si se aprueba, se formaliza el préstamo. Algunas líneas piden después justificar el destino de los fondos.</li>
@@ -108,22 +108,15 @@ cuerpo="""
 <p>La Central de Información de Riesgos del Banco de España (CIRBE) recoge los préstamos y avales que tienes con las entidades financieras. El banco lo consulta siempre. Puedes pedir tu propio informe gratis en la sede electrónica del Banco de España y revisar que coincide con tu relación de deudas antes de presentar la solicitud.</p>
 <h3>Los certificados de estar al corriente</h3>
 <p>Los certificados de Hacienda y de la Seguridad Social tienen una validez limitada. Pídelos cerca de la fecha de presentación para que no caduquen durante el análisis.</p>
-<h3>La memoria del proyecto</h3>
-<p>Es el documento que más pesa en la decisión y el que más se descuida. Debe explicar quién es la empresa, qué se va a financiar, cuánto cuesta, qué resultados se esperan y cómo se devolverá el préstamo. En las empresas de nueva creación, sin histórico contable, es todavía más importante.</p>
 
 <h2>Documentación específica de algunas líneas</h2>
 <ul>
   <li><strong>Líneas de inversión sostenible:</strong> suelen exigir una memoria técnica que justifique el impacto del proyecto, por ejemplo el ahorro energético.</li>
-  <li><strong>ICO Crecimiento:</strong> además de la documentación económica, se presenta una memoria técnica con el guion que fija el ICO, un cuestionario de sostenibilidad y una declaración responsable de no estar afectado por las prohibiciones para recibir ayudas públicas. Se piden cuentas auditadas de los dos últimos ejercicios o un aval que las sustituya, y todo se presenta en ICO Online con firma electrónica. Más detalles en la guía de <a href="../ico-crecimiento/">ICO Crecimiento</a>.</li>
+  <li><strong>ICO Crecimiento:</strong> además de la documentación económica, se presenta una memoria técnica, un cuestionario de sostenibilidad y una declaración responsable de no estar afectado por las prohibiciones para recibir ayudas públicas. Se piden cuentas auditadas de los dos últimos ejercicios o un aval que las sustituya, y todo se presenta en ICO Online con firma electrónica. Más detalles en la guía de <a href="../ico-crecimiento/">ICO Crecimiento</a>.</li>
 </ul>
 
-<h2>Consejos para que el expediente pase a la primera</h2>
-<ul>
-  <li>Comprueba que las cifras cuadran entre impuestos, cuentas y balance provisional.</li>
-  <li>Ordena los documentos y nómbralos con claridad: el analista lo agradece.</li>
-  <li>Explica por adelantado cualquier dato llamativo, como un año de pérdidas o una deuda puntual.</li>
-  <li>Prepara un único expediente que puedas presentar en varios bancos a la vez.</li>
-</ul>
+<h2>Lo que no se ve en la lista</h2>
+<p>Reunir los papeles es la parte fácil. Lo que decide la operación es cómo se presentan: que las cifras cuadren entre todos los documentos, que la memoria convenza al analista y que se respondan a tiempo sus requerimientos. En <a href="../../asesoria-ico-crecimiento/">Ítaca Crecimiento</a> preparamos el expediente completo de ICO Crecimiento, empezando por un estudio gratuito.</p>
 """,
 faqs=[
 ("¿Qué documentos piden para un préstamo ICO?", "Normalmente: identificación de la empresa o del autónomo, cuentas anuales o declaración de la renta, Impuesto sobre Sociedades, IVA, balance del año en curso, relación de deudas, informe CIRBE, certificados de estar al corriente con Hacienda y la Seguridad Social, presupuestos de la inversión y una memoria del proyecto."),
@@ -221,19 +214,11 @@ cuerpo="""
 <p>Tampoco pueden pedirla las empresas participadas en un 25 % o más por organismos públicos. Entre los sectores excluidos están, por ejemplo, el juego, el armamento, los medios de comunicación y la intermediación financiera (salvo empresas fintech e insurtech).</p>
 
 <h2>El cuestionario de sostenibilidad</h2>
-<p>Todas las solicitudes incluyen un cuestionario de sostenibilidad (criterios ambientales, sociales y de gobierno) que el ICO puntúa de 0 a 6. Si la empresa queda por debajo de 2 puntos, el contrato incluye un Plan de Remediación que hay que acreditar en 24 meses; si no se consigue, se aplica una comisión adicional del 0,25 % anual sobre el importe firmado. Lo explicamos en la guía del <a href="../cuestionario-sostenibilidad-ico-crecimiento/">cuestionario de sostenibilidad</a>.</p>
-<p>Muchas pymes puntúan bajo no porque no hagan las cosas, sino porque no las tienen por escrito: plan de igualdad, código de conducta, control de consumos o criterios con proveedores. Ordenar esa documentación antes de responder es de lo que más rinde al preparar la solicitud.</p>
+<p>Todas las solicitudes incluyen un cuestionario de sostenibilidad (criterios ambientales, sociales y de gobierno) que el ICO puntúa de 0 a 6. Si la empresa queda por debajo de 2 puntos, el contrato incluye un Plan de Remediación que hay que acreditar en 24 meses; si no se consigue, se aplica una comisión adicional del 0,25 % anual sobre el importe firmado.</p>
 
 <h2>Cómo se solicita</h2>
-<ol class="pasos-guia">
-  <li>Comprueba los requisitos, sobre todo la antigüedad, las cuentas auditadas o el aval, los resultados y la CIRBE.</li>
-  <li>Prepara la documentación económica y la memoria técnica, que sigue un guion fijado por el propio ICO: qué se financia, cuánto cuesta y cómo se devolverá.</li>
-  <li>Responde al cuestionario de sostenibilidad.</li>
-  <li>Presenta la solicitud en ICO Online con la firma electrónica de la empresa. El formulario permite designar un representante voluntario para que actúe ante el ICO durante la tramitación.</li>
-  <li>Atiende los requerimientos del ICO en un máximo de 5 días hábiles. Si no se contestan, o si la notificación electrónica no se abre en ese plazo, la solicitud se da por desistida.</li>
-  <li>Si se aprueba, firma el préstamo y, después, justifica el destino de los fondos.</li>
-</ol>
-<p>Al no haber un banco que acompañe el proceso, la solicitud tiene que estar completa y bien argumentada desde el principio. Ahí es donde más ayuda preparar el expediente con un especialista. Si la solicitud se inadmite o se desestima, se puede volver a presentar una vez corregidos los defectos, pero se pierde el turno en el orden de llegada.</p>
+<p>La solicitud se presenta directamente al ICO en la plataforma ICO Online, con la firma electrónica de la empresa. Además de la documentación económica, incluye una memoria técnica y un cuestionario de sostenibilidad, y durante el análisis el ICO puede pedir aclaraciones con un plazo de solo 5 días hábiles para responder: si no se contestan, la solicitud se da por desistida.</p>
+<p>Al no haber un banco que prepare la operación, la solicitud tiene que llegar completa y bien argumentada desde el principio. Si se inadmite o se desestima, se puede volver a presentar, pero se pierde el turno en el orden de llegada. Por eso conviene prepararla con un especialista: en Ítaca Crecimiento <a href="../../asesoria-ico-crecimiento/">nos ocupamos de todo el expediente</a>, empezando por un estudio gratuito.</p>
 
 <h2>ICO Crecimiento frente a las líneas de mediación</h2>
 <div class="table-wrap">
@@ -258,7 +243,6 @@ cuerpo="""
   <li><a href="../../blog/por-que-deniegan-ico-crecimiento/">Por qué deniegan ICO Crecimiento</a>: los filtros de solvencia del ICO.</li>
   <li><a href="../../blog/ico-crecimiento-o-prestamo-bancario/">ICO Crecimiento o préstamo bancario</a>: cuál conviene a tu pyme.</li>
   <li><a href="../como-solicitar-un-prestamo-ico/">Cómo solicitar un préstamo ICO paso a paso</a> y <a href="../../blog/errores-al-solicitar-ico-crecimiento/">los 9 errores más frecuentes</a>.</li>
-  <li><a href="../consultora-ico-crecimiento/">¿Necesitas una consultora o te basta con los asesores del ICO?</a></li>
 </ul>
 """,
 faqs=[
@@ -450,7 +434,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from guias_nuevas import NUEVAS
 GUIAS.extend(NUEVAS)
 
-ORDEN = ["ico-crecimiento", "consultora-ico-crecimiento", "mitos-ico-crecimiento", "consultora-ico-crecimiento", "ico-crecimiento-circulante", "aval-sgr", "cuestionario-sostenibilidad-ico-crecimiento",
+ORDEN = ["ico-crecimiento", "mitos-ico-crecimiento", "ico-crecimiento-circulante", "aval-sgr",
          "ico-crecimiento-dana", "novedades-ico-crecimiento", "documentacion-prestamo-ico", "como-solicitar-un-prestamo-ico",
          "circulante-empresas-agroalimentarias", "circulante-distribucion-mayoristas",
          "circulante-construccion-instaladoras", "circulante-empresas-industriales"]
@@ -652,7 +636,7 @@ SERV_FAQS = [
     ("¿El estudio inicial tiene coste?",
      "No. El estudio de viabilidad es gratuito y sin compromiso: te decimos si tu empresa cumple los requisitos, cuánto conviene pedir y qué puntos hay que reforzar. Con eso decides si quieres que preparemos la solicitud."),
     ("¿Es obligatorio contratar un asesor para pedir ICO Crecimiento?",
-     "No. La empresa puede presentar la solicitud por su cuenta en ICO Online. La diferencia es que en ICO Crecimiento no hay un banco que prepare la operación: la empresa tiene que aportar la documentación, el plan de crecimiento, el cuestionario de sostenibilidad y responder a los requerimientos del ICO. Ese trabajo es el que hacemos nosotros."),
+     "No es un requisito de la línea, pero en ICO Crecimiento no hay un banco que prepare la operación: hay que aportar la documentación, la memoria técnica y el cuestionario de sostenibilidad, y responder a los requerimientos del ICO en 5 días hábiles. Un error puede costar la denegación o el turno en el orden de llegada. Ese trabajo es el que hacemos nosotros, y la parte variable de nuestros honorarios solo se paga si el ICO aprueba el préstamo."),
     ("¿Me garantizáis que el ICO me conceda el préstamo?",
      "No. La decisión la toma siempre el ICO y nadie puede garantizarla. Lo que hacemos es que la solicitud llegue completa, coherente y bien argumentada, y avisarte antes de presentarla si vemos algo que pueda jugar en contra."),
     ("¿Trabajáis con empresas de toda España?",
@@ -683,7 +667,7 @@ serv_body = f'''    <p class="breadcrumb"><a href="../">Inicio</a><span aria-hid
     <ol class="pasos-guia">
       <li><strong>Estudio de viabilidad (gratuito).</strong> Comprobamos los requisitos (sociedad, 4 años de antigüedad, cuentas auditadas o <a href="../guias/aval-sgr/">aval de SGR</a>, resultados y patrimonio, <a href="../blog/como-leer-informe-cirbe/">CIRBE</a>), calculamos cuánto conviene pedir y si encaja mejor como <a href="../guias/ico-crecimiento-circulante/">circulante</a> o como inversión.</li>
       <li><strong>Expediente completo.</strong> Reunimos la <a href="../guias/documentacion-prestamo-ico/">documentación</a>, revisamos que las cifras cuadren y redactamos el plan de crecimiento que el ICO tiene que valorar.</li>
-      <li><strong>Cuestionario de sostenibilidad.</strong> Preparamos contigo las respuestas del <a href="../guias/cuestionario-sostenibilidad-ico-crecimiento/">cuestionario ASG</a> para evitar una puntuación que bloquee la operación.</li>
+      <li><strong>Cuestionario de sostenibilidad.</strong> Preparamos contigo las respuestas del cuestionario ASG para evitar una puntuación que bloquee la operación.</li>
       <li><strong>Presentación en ICO Online.</strong> Te acompañamos al presentar la solicitud con el certificado digital de la empresa y coordinamos el aval de SGR si hace falta.</li>
       <li><strong>Requerimientos del ICO.</strong> Preparamos contigo las respuestas a las dudas y peticiones de información del ICO durante el análisis.</li>
       <li><strong>Seguimiento hasta la resolución.</strong> Atendemos los requerimientos del ICO y te informamos hasta que resuelve tu solicitud.</li>
