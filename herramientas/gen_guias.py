@@ -632,6 +632,10 @@ print("\n".join(f"guias/{g['slug']}/" for g in GUIAS))
 
 # ---------------------------------------------------------------- página de servicio
 SERV_FAQS = [
+    ("¿Qué hace una consultoría ICO para pymes?",
+     "Ayuda a la empresa a conseguir financiación del Instituto de Crédito Oficial: comprueba si cumple los requisitos, calcula cuánto conviene pedir, prepara el expediente y la solicitud, y la acompaña hasta que el ICO resuelve. En Ítaca Crecimiento estamos especializados en ICO Crecimiento, la línea en la que el ICO presta directamente a la pyme, sin banco intermediario."),
+    ("¿Trabajáis con mi gestoría o asesoría?",
+     "Sí. Tu gestoría sigue llevando la contabilidad y los impuestos; nosotros nos ocupamos de la solicitud de ICO Crecimiento y le pedimos lo que haga falta. No sustituimos a tu asesor habitual."),
     ("¿Cuánto cuestan vuestros honorarios?",
      "Tienen una parte fija y una parte variable que solo cobramos si el ICO aprueba el préstamo. Te damos el presupuesto exacto por escrito después del estudio gratuito, cuando ya sabemos qué operación tiene sentido, y antes de que decidas nada. Además, la normativa de ICO Crecimiento considera financiables los gastos de consultoría necesarios para solicitar el préstamo, así que nuestros honorarios pueden incluirse en la propia operación."),
     ("¿El estudio inicial tiene coste?",
@@ -648,8 +652,8 @@ SERV_FAQS = [
 SERV_FAQ_HTML = "".join(f"\n    <h3>{q}</h3>\n    <p>{a}</p>" for q, a in SERV_FAQS)
 serv_url = f"{SITE}/asesoria-ico-crecimiento/"
 serv_body = f'''    <p class="breadcrumb"><a href="../">Inicio</a><span aria-hidden="true">/</span>Asesoría ICO Crecimiento</p>
-    <h1>Asesoría para solicitar ICO Crecimiento</h1>
-    <p class="lead">Preparamos y tramitamos tu solicitud de ICO Crecimiento de principio a fin: estudio de viabilidad, expediente, presentación en ICO Online y seguimiento hasta la resolución. Para pymes de toda España, con un solo interlocutor y un estudio inicial gratuito.</p>
+    <h1>Consultoría ICO para pymes: asesoría para solicitar ICO Crecimiento</h1>
+    <p class="lead">Somos una consultoría especializada en préstamos ICO para pymes. Preparamos y tramitamos tu solicitud de ICO Crecimiento de principio a fin: estudio de viabilidad, expediente, presentación en ICO Online y seguimiento hasta la resolución. Para pymes de toda España, con un solo interlocutor y un estudio inicial gratuito.</p>
     <div class="resumen">
       <p class="eyebrow">En resumen</p>
       <ul>
@@ -659,6 +663,10 @@ serv_body = f'''    <p class="breadcrumb"><a href="../">Inicio</a><span aria-hid
         <li>Especializados en <strong>una sola línea</strong>: ICO Crecimiento.</li>
       </ul>
     </div>
+
+    <h2>Una consultoría ICO centrada en una sola línea</h2>
+    <p>Muchas gestorías y asesorías tramitan préstamos ICO de vez en cuando, casi siempre a través del banco. Nosotros solo hacemos una cosa: ayudar a pymes a solicitar <strong>ICO Crecimiento</strong>, el préstamo directo del ICO. Conocemos sus requisitos, su documentación y la forma en que el ICO analiza cada solicitud, y eso se nota en el expediente que presentamos en nombre de tu empresa.</p>
+    <p>Trabajamos codo con codo con tu gestoría o tu asesor contable: ellos llevan la contabilidad y los impuestos, y nosotros nos encargamos de la operación con el ICO.</p>
 
     <h2>Por qué ICO Crecimiento necesita una buena preparación</h2>
     <p>En los préstamos ICO de siempre, el banco prepara la operación. En ICO Crecimiento no hay banco: la empresa presenta la solicitud directamente al ICO en la plataforma ICO Online y es el ICO quien la analiza. Eso significa que la propia empresa tiene que aportar las cifras, justificar el proyecto, responder el cuestionario de sostenibilidad y atender los requerimientos.</p>
@@ -690,7 +698,7 @@ serv_body = f'''    <p class="breadcrumb"><a href="../">Inicio</a><span aria-hid
     </div>
 {CTA.format(up="../")}'''
 serv_ld = [
-    {"@context": "https://schema.org", "@type": "Service", "name": "Asesoría para solicitar ICO Crecimiento",
+    {"@context": "https://schema.org", "@type": "Service", "name": "Consultoría ICO para pymes: asesoría para solicitar ICO Crecimiento",
      "serviceType": "Consultoría de financiación pública para pymes", "url": serv_url,
      "description": "Estudio de viabilidad gratuito, preparación del expediente, presentación en ICO Online y seguimiento hasta la resolución del préstamo ICO Crecimiento.",
      "provider": ORG, "areaServed": {"@type": "Country", "name": "España"},
@@ -703,7 +711,7 @@ serv_ld = [
 ]
 os.makedirs(f"{ROOT}/asesoria-ico-crecimiento", exist_ok=True)
 with open(f"{ROOT}/asesoria-ico-crecimiento/index.html", "w") as fh:
-    fh.write(page(1, serv_url, titulo_seo("Asesoría ICO Crecimiento: tramitamos tu solicitud"),
-                  "Tramitamos tu ICO Crecimiento: estudio gratuito, expediente, ICO Online y firma. La parte variable de los honorarios solo se paga si el ICO lo aprueba.",
+    fh.write(page(1, serv_url, "Consultoría ICO para pymes: asesoría ICO Crecimiento | Ítaca",
+                  "Consultoría especializada en préstamos ICO para pymes. Tramitamos tu ICO Crecimiento: estudio gratuito, expediente y seguimiento. Variable solo si se aprueba.",
                   "servicio", serv_body, serv_ld))
 print("asesoria-ico-crecimiento/")
