@@ -306,6 +306,7 @@ def page(depth, url, title, desc, current, body, jsonld, og_type="article", og_i
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18496340494"></script>
 <script src="/assets/cookies.js" defer></script>
+<script src="/assets/origen.js" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{title}</title>

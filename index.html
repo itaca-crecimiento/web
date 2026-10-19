@@ -14,6 +14,7 @@
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18496340494"></script>
 <script src="/assets/cookies.js" defer></script>
+<script src="/assets/origen.js" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Préstamo ICO Crecimiento: te ayudamos a pedirlo | Ítaca</title>
@@ -967,6 +968,7 @@
         'Antigüedad: ' + data.get('antiguedad'),
         'Cuentas auditadas: ' + data.get('auditadas'),
         'Importe aproximado: ' + data.get('importe'),
+        'Origen: ' + (data.get('origen') || '-'),
         '',
         'Proyecto o necesidad:',
         data.get('proyecto') || '-'
