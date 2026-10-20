@@ -28,7 +28,11 @@
     document.head.appendChild(s);
   }
 
-  function close() { if (box) { box.remove(); box = null; } }
+  // Mientras el aviso está abierto, se deja hueco al final de la página para que no tape
+  // nada (en el móvil cubría el botón «Ver mi resultado» del test).
+  function hueco() { document.body.style.paddingBottom = box ? (box.offsetHeight + 24) + 'px' : ''; }
+
+  function close() { if (box) { box.remove(); box = null; hueco(); window.removeEventListener('resize', hueco); } }
 
   function choose(v) {
     save(v);
@@ -51,6 +55,8 @@
       if (v) choose(v);
     });
     document.body.appendChild(box);
+    hueco();
+    window.addEventListener('resize', hueco);
   }
 
   window.itacaCookies = { open: open };

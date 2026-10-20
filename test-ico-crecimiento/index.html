@@ -294,6 +294,12 @@
     if (!Object.keys(respondidas).length) evento('test_inicio');
     respondidas[n] = true;
     evento('test_pregunta', { pregunta: n, numero: Q.indexOf(n) + 1, respondidas: Object.keys(respondidas).length });
+    // Con la última respuesta, se acerca el botón «Ver mi resultado» para que no pase desapercibido.
+    if (Object.keys(respondidas).length === Q.length) {
+      var btn = test.querySelector('.test-actions button');
+      var r = btn.getBoundingClientRect();
+      if (r.bottom > window.innerHeight * 0.6) btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
   });
   function val(n) { var el = test.querySelector('input[name="' + n + '"]:checked'); return el ? el.value : null; }
   function li(items) { return items.length ? '<ul>' + items.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '</ul>' : ''; }
