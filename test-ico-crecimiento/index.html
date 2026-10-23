@@ -65,6 +65,19 @@
   .opt input:checked + span { background: var(--navy); border-color: var(--navy); color: var(--paper); }
   .opt input:focus-visible + span { outline: 2px solid var(--terra); outline-offset: 2px; }
   .q.missing legend { color: var(--terra); }
+  /* Modo «una pregunta por pantalla» (lo activa el script; sin JS se ven todas) */
+  .progreso { display: grid; gap: 8px; }
+  .progreso p { margin: 0; font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--text-2); }
+  .progreso .barra { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
+  .progreso .barra span { display: block; height: 100%; width: 0; background: var(--terra); transition: width .3s ease; }
+  .test.pasos .q { display: none; border-bottom: 0; padding-bottom: 0; }
+  .test.pasos .q.activa { display: block; }
+  .test.pasos .test-actions { display: none; }
+  .test.pasos.ultimo .test-actions { display: flex; }
+  .pasos-nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 44px; }
+  .pasos-nav button { border: 0; background: none; padding: 10px 0; font: inherit; font-size: 15px; font-weight: 600; color: var(--navy); cursor: pointer; }
+  .pasos-nav button[hidden] { display: none; }
+  .pasos-nav .sig { color: var(--terra); margin-left: auto; }
   .test-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
   .btn-test {
     border: 0; cursor: pointer; background: var(--terra); color: var(--paper);
@@ -304,6 +317,39 @@
   // Eventos de GA4 para ver el embudo del test: inicio, cada pregunta respondida y resultado.
   function evento(nombre, datos) { try { if (typeof gtag === 'function') gtag('event', nombre, datos || {}); } catch (e) {} }
   var respondidas = {}, ultimoTipo = '';
+
+  // Una pregunta por pantalla, con barra de progreso. Al elegir respuesta pasa sola a la siguiente.
+  var qs = Q.map(function (n) { return test.querySelector('[data-q="' + n + '"]'); });
+  var paso = 0;
+  var prog = document.createElement('div');
+  prog.className = 'progreso';
+  prog.innerHTML = '<p id="paso-txt"></p><div class="barra" aria-hidden="true"><span id="paso-barra"></span></div>';
+  test.insertBefore(prog, qs[0]);
+  var nav = document.createElement('div');
+  nav.className = 'pasos-nav';
+  nav.innerHTML = '<button type="button" class="ant">← Anterior</button><button type="button" class="sig">Siguiente →</button>';
+  qs[Q.length - 1].after(nav);
+  var bAnt = nav.querySelector('.ant'), bSig = nav.querySelector('.sig');
+  test.classList.add('pasos');
+  function irA(i) {
+    paso = Math.max(0, Math.min(Q.length - 1, i));
+    qs.forEach(function (q, k) { q.classList.toggle('activa', k === paso); });
+    test.classList.toggle('ultimo', paso === Q.length - 1);
+    document.getElementById('paso-txt').textContent = 'Pregunta ' + (paso + 1) + ' de ' + Q.length;
+    document.getElementById('paso-barra').style.width = ((paso + 1) / Q.length * 100) + '%';
+    bAnt.hidden = paso === 0;
+    bSig.hidden = paso === Q.length - 1 || !val(Q[paso]);
+    var top = test.getBoundingClientRect().top;
+    if (top < 0) test.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  bAnt.addEventListener('click', function () { irA(paso - 1); });
+  bSig.addEventListener('click', function () { irA(paso + 1); });
+  test.addEventListener('change', function (e) {
+    var k = Q.indexOf(e.target && e.target.name);
+    if (k !== paso) return;
+    if (paso < Q.length - 1) setTimeout(function () { irA(paso + 1); }, 250);
+    else bSig.hidden = true;
+  });
   test.addEventListener('change', function (e) {
     var n = e.target && e.target.name;
     if (Q.indexOf(n) === -1 || respondidas[n]) return;
@@ -318,6 +364,7 @@
     }
   });
   function val(n) { var el = test.querySelector('input[name="' + n + '"]:checked'); return el ? el.value : null; }
+  irA(0);
   function li(items) { return items.length ? '<ul>' + items.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '</ul>' : ''; }
 
   function condiciones(f) {
@@ -340,6 +387,7 @@
       evento('test_incompleto', { faltan: faltan.length });
       err.textContent = 'Te falta responder ' + (faltan.length === 1 ? '1 pregunta' : faltan.length + ' preguntas') + ', marcada' + (faltan.length === 1 ? '' : 's') + ' en naranja.';
       err.hidden = false;
+      irA(Q.indexOf(faltan[0]));
       test.querySelector('[data-q="' + faltan[0] + '"]').scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
     }
@@ -429,6 +477,7 @@
   document.getElementById('repetir').addEventListener('click', function () {
     test.reset();
     respondidas = {};
+    irA(0);
     test.querySelectorAll('.q').forEach(function (q) { q.classList.remove('missing'); });
     res.hidden = true;
     test.scrollIntoView({ behavior: 'smooth', block: 'start' });
