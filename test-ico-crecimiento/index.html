@@ -85,6 +85,10 @@
   }
   .btn-test:hover { background: #9C4624; }
   .test-error { margin: 0; font-size: 14px; color: #9C4624; }
+  .oferta { margin: 4px 0 18px; padding: 16px 18px; background: var(--paper); border-left: 3px solid var(--terra); }
+  .legal-body .veredicto .oferta p { margin: 0 0 12px; }
+  .oferta a { display: inline-block; padding: 11px 20px; background: var(--terra); color: var(--paper); font-weight: 600; text-decoration: none; border-radius: 2px; }
+  .oferta a:hover { background: #9C4624; color: var(--paper); }
   .wa { margin-top: 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
   .wa p { margin: 0; font-size: 15px; color: var(--text-2); }
   .btn-wa {
@@ -263,7 +267,7 @@
 
       <form class="lead-form" id="lead-form" data-endpoint="https://formspree.io/f/myezlpqe" novalidate>
         <h3 id="lead-title">¿Quieres que revisemos tu caso?</h3>
-        <p class="intro">Déjanos tus datos y te hacemos un estudio gratuito y sin compromiso: si la operación es viable y cuánto conviene pedir. Te respondemos en 48 horas laborables. Recibiremos también tus respuestas del test, así no tendrás que repetirlas.</p>
+        <p class="intro" id="lead-intro">Déjanos tus datos y te hacemos un estudio gratuito y sin compromiso: si la operación es viable y cuánto conviene pedir. Te respondemos en 48 horas laborables. Recibiremos también tus respuestas del test, así no tendrás que repetirlas.</p>
         <input type="hidden" name="_subject" id="lead-subject" value="Test ICO Crecimiento">
         <input type="hidden" name="resultado_test" id="lead-resultado">
         <input type="hidden" name="respuestas_test" id="lead-respuestas">
@@ -414,6 +418,7 @@
     if (a.corriente === 'nose') avisos.push('Pide los certificados de estar al corriente con Hacienda y la Seguridad Social: son necesarios para la solicitud.');
     if (a.finalidad === 'otra') avisos.push('ICO Crecimiento financia circulante e inversión. Si tu necesidad es otra, por ejemplo reorganizar deudas, hay que revisar si encaja.');
 
+var oferta = '<div class="oferta"><p><strong>¿Cuánto podría pedir tu empresa?</strong> Te enviamos gratis una estimación del importe que podrías conseguir, según los datos de tu empresa.</p><a href="#lead-form">Quiero mi estimación gratis</a></div>';
     var box = document.getElementById('veredicto');
     var estado, titulo, detalle, asunto, leadTitle;
     var noPuede = a.antiguedad === 'menos4';
@@ -440,18 +445,18 @@
       box.className = 'veredicto cond';
       estado = 'Encajas, con algún punto por resolver';
       titulo = 'Tu empresa puede encajar en ICO Crecimiento';
-      detalle = '<p>Cumples los requisitos básicos. Antes de solicitarlo conviene resolver esto:</p>' + li(avisos) +
+      detalle = oferta + '<p>Cumples los requisitos básicos. Antes de solicitarlo conviene resolver esto:</p>' + li(avisos) +
         '<p>Las condiciones que te aplicarían:</p>' + li(condiciones(a.finalidad)) + notasHtml;
       asunto = 'Test ICO Crecimiento: encaja con condiciones';
-      leadTitle = '¿Quieres que revisemos tu caso?';
+      leadTitle = '¿Cuánto podría pedir tu empresa?';
     } else {
       box.className = 'veredicto ok';
       estado = 'Buenas noticias';
       titulo = 'Tu empresa encaja en ICO Crecimiento';
-      detalle = '<p>Según tus respuestas, cumples los requisitos principales. Las condiciones que te aplicarían:</p>' + li(condiciones(a.finalidad)) +
+      detalle = oferta + '<p>Según tus respuestas, cumples los requisitos principales. Las condiciones que te aplicarían:</p>' + li(condiciones(a.finalidad)) +
         '<p>Desde 50.000 €, a Euríbor más un 1,75 % (o menos si la operación lleva aval), y sin pasar por el banco. La línea se concede por orden de llegada, así que conviene no esperar.</p>' + notasHtml;
       asunto = 'Test ICO Crecimiento: encaja';
-      leadTitle = 'Siguiente paso: preparar tu solicitud';
+      leadTitle = '¿Cuánto podría pedir tu empresa?';
     }
     var tipo = noPuede ? 'menos_4_anos' : bloqueos.length ? 'no_encaja' : avisos.length ? 'encaja_con_condiciones' : 'encaja';
     evento('test_resultado', { resultado: tipo, importe: a.importe, finalidad: a.finalidad });
@@ -460,6 +465,12 @@
     document.getElementById('titulo-res').textContent = titulo;
     document.getElementById('detalle').innerHTML = detalle;
     document.getElementById('lead-title').textContent = leadTitle;
+    var encaja = !noPuede && !bloqueos.length;
+    document.getElementById('lead-intro').textContent = encaja
+      ? 'Déjanos tus datos y te enviamos gratis y sin compromiso una estimación del importe que podría conseguir tu empresa con ICO Crecimiento. Recibiremos también tus respuestas del test, así no tendrás que repetirlas.'
+      : 'Déjanos tus datos y te hacemos un estudio gratuito y sin compromiso: si la operación es viable y cuánto conviene pedir. Te respondemos en 48 horas laborables. Recibiremos también tus respuestas del test, así no tendrás que repetirlas.';
+    var bLead = document.querySelector('#lead-form button[type="submit"]');
+    bLead.textContent = bLead.dataset.txt = encaja ? 'Quiero mi estimación gratis' : 'Quiero el estudio gratuito';
     document.getElementById('lead-subject').value = asunto;
     document.getElementById('lead-resultado').value = estado;
     document.getElementById('lead-respuestas').value = Q.map(function (n) { return TXT[n][a[n]]; }).join(' · ');
@@ -483,6 +494,9 @@
     test.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
+  document.getElementById('detalle').addEventListener('click', function (e) {
+    if (e.target.closest && e.target.closest('.oferta a')) evento('clic_estimacion', { resultado: ultimoTipo });
+  });
   document.getElementById('wa-link').addEventListener('click', function () {
     evento('contacto_whatsapp', { resultado: ultimoTipo });
   });
@@ -514,7 +528,7 @@
         lerr.textContent = 'No se ha podido enviar. Inténtalo de nuevo o escríbenos a general@itacacrecimiento.com.';
         lerr.hidden = false;
       })
-      .finally(function () { btn.disabled = false; btn.textContent = 'Quiero el estudio gratuito'; });
+      .finally(function () { btn.disabled = false; btn.textContent = btn.dataset.txt || 'Quiero el estudio gratuito'; });
   });
 })();
 </script>
