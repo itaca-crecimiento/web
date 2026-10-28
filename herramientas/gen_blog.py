@@ -8,7 +8,7 @@ import json, os, sys
 
 ROOT = sys.argv[1]
 SITE = "https://itacacrecimiento.com"
-AUTOR = "Javier Beltrán"
+AUTOR = "el equipo de Ítaca Crecimiento"
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
          "septiembre", "octubre", "noviembre", "diciembre"]
 
@@ -278,7 +278,7 @@ PROGRAMADOS = [p for p in POSTS if p["fecha"] > HOY]
 POSTS = [p for p in POSTS if p["fecha"] <= HOY]
 POSTS.sort(key=lambda p: p["fecha"], reverse=True)
 ORG = {"@type": "ProfessionalService", "@id": f"{SITE}/#empresa", "name": "Ítaca Crecimiento", "url": f"{SITE}/"}
-PERSON = {"@type": "Person", "name": AUTOR, "worksFor": {"@id": f"{SITE}/#empresa"}}
+PERSON = {"@id": f"{SITE}/#empresa"}  # autor: la propia empresa
 
 def titulo_seo(t):
     """Añade la marca al title solo si cabe en los ~60 caracteres que muestra Google."""
@@ -399,7 +399,7 @@ for p in POSTS:
     faq_html = "".join(f"\n    <h3>{q}</h3>\n    <p>{a}</p>" for q, a in p["faqs"])
     body = f'''    <p class="breadcrumb"><a href="../../">Inicio</a><span aria-hidden="true">/</span><a href="../">Blog</a><span aria-hidden="true">/</span>{p["titulo"]}</p>
     <h1>{p["titulo"]}</h1>
-    <p class="byline">Por <strong>{AUTOR}</strong>, Ítaca Crecimiento · <time datetime="{p["fecha"]}">{fecha_larga(p["fecha"])}</time></p>
+    <p class="byline">Por <strong>{AUTOR}</strong> · <time datetime="{p["fecha"]}">{fecha_larga(p["fecha"])}</time></p>
 {portada(p["slug"], "../../")}
     <div class="resumen">
       <p class="eyebrow">En resumen</p>
@@ -431,7 +431,7 @@ items = "".join(
     for p in POSTS)
 hub_body = f'''    <p class="breadcrumb"><a href="../">Inicio</a><span aria-hidden="true">/</span>Blog</p>
     <h1>Blog de ICO Crecimiento</h1>
-    <p class="lead">Artículos prácticos sobre ICO Crecimiento y la financiación de pymes: casos por sector, comparativas y consejos para preparar una buena solicitud. Por {AUTOR}, de Ítaca Crecimiento.</p>
+    <p class="lead">Artículos prácticos sobre ICO Crecimiento y la financiación de pymes: casos por sector, comparativas y consejos para preparar una buena solicitud. Por {AUTOR}.</p>
     <ul class="guia-list">{items}
     </ul>
 {CTA.format(up="../")}'''

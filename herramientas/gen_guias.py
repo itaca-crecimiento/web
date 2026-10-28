@@ -5,7 +5,7 @@ ROOT = sys.argv[1]
 SITE = "https://itacacrecimiento.com"
 FECHA_ISO = "2026-10-02"
 FECHA = "2 de octubre de 2026"
-AUTOR = "Javier Beltrán"
+AUTOR = "el equipo de Ítaca Crecimiento"
 
 GUIAS = []  # (slug, titulo, titulo_seo, descripcion, resumen_lista, cuerpo_html, faqs)
 
@@ -552,7 +552,7 @@ def page(depth, url, title, desc, side_current, body, jsonld):
 '''
 
 ORG = {"@type": "ProfessionalService", "@id": f"{SITE}/#empresa", "name": "Ítaca Crecimiento", "url": f"{SITE}/"}
-PERSON = {"@type": "Person", "name": AUTOR, "worksFor": {"@id": f"{SITE}/#empresa"}}
+PERSON = {"@id": f"{SITE}/#empresa"}  # autor: la propia empresa
 
 CTA = '''
     <aside class="cta">
@@ -583,7 +583,7 @@ for g in GUIAS:
     faq_html = "".join(f"\n    <h3>{q}</h3>\n    <p>{a}</p>" for q, a in g["faqs"])
     body = f'''    <p class="breadcrumb"><a href="../../">Inicio</a><span aria-hidden="true">/</span><a href="../">Guías</a><span aria-hidden="true">/</span>{g["titulo"]}</p>
     <h1>{g["titulo"]}</h1>
-    <p class="byline">Por <strong>{AUTOR}</strong>, Ítaca Crecimiento · Actualizado el <time datetime="{FECHA_ISO}">{FECHA}</time></p>
+    <p class="byline">Por <strong>{AUTOR}</strong> · Actualizado el <time datetime="{FECHA_ISO}">{FECHA}</time></p>
     <div class="resumen">
       <p class="eyebrow">En resumen</p>
       {g["resumen"]}
@@ -615,7 +615,7 @@ def lista(gs):
 items = lista(PRINCIPALES) + '\n    </ul>\n    <h2 class="hub-sub">ICO Crecimiento para circulante, por sector</h2>\n    <ul class="guia-list">' + lista(SECTORES)
 hub_body = f'''    <p class="breadcrumb"><a href="../">Inicio</a><span aria-hidden="true">/</span>Guías</p>
     <h1>Guías sobre ICO Crecimiento y préstamos ICO</h1>
-    <p class="lead">Explicaciones claras sobre ICO Crecimiento, el préstamo directo del ICO para pymes, y sobre cómo se piden los préstamos ICO: requisitos, documentación y pasos. Escritas por {AUTOR}, de Ítaca Crecimiento.</p>
+    <p class="lead">Explicaciones claras sobre ICO Crecimiento, el préstamo directo del ICO para pymes, y sobre cómo se piden los préstamos ICO: requisitos, documentación y pasos. Escritas por {AUTOR}.</p>
     <ul class="guia-list">{items}
     </ul>
 {CTA.format(up="../")}'''
