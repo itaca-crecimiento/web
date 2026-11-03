@@ -943,6 +943,15 @@
             if (!r.ok) throw new Error();
             // Conversión de Google Ads: solo cuando el envío ha llegado bien
             try { if (typeof gtag === 'function') gtag('event', 'conversion', {'send_to': 'AW-18496340494/QsroCIDg654dEI6E3_NE'}); gtag('event', 'generate_lead', {'form_name': 'contacto'}); } catch (e) {}
+            if (window.itacaBrevoLead) window.itacaBrevoLead({
+              EMAIL: data.get('email'),
+              NOMBRE: data.get('nombre'),
+              EMPRESA: data.get('empresa'),
+              TELEFONO: data.get('telefono'),
+              RESULTADO_TEST: 'Formulario de contacto',
+              IMPORTE: data.get('importe'),
+              FINALIDAD: data.get('finalidad')
+            });
             done();
           })
           .catch(function () {
@@ -976,6 +985,7 @@
     });
   })();
 </script>
+<script src="assets/brevo-lead.js" defer></script>
 <script src="assets/nav.js" defer></script>
 <script src="assets/reveal.js" defer></script>
 </body>

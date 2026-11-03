@@ -521,6 +521,16 @@ var oferta = '<div class="oferta"><p><strong>¿Cuánto podría pedir tu empresa?
         if (!r.ok) throw new Error();
         // Conversión de Google Ads: solo cuando el envío ha llegado bien
         try { if (typeof gtag === 'function') gtag('event', 'conversion', {'send_to': 'AW-18496340494/QsroCIDg654dEI6E3_NE'}); gtag('event', 'generate_lead', {'form_name': 'test'}); } catch (e) {}
+        var imp = test.querySelector('input[name="importe"]:checked'), fin = test.querySelector('input[name="finalidad"]:checked');
+        if (window.itacaBrevoLead) window.itacaBrevoLead({
+          EMAIL: document.getElementById('l-correo').value.trim(),
+          NOMBRE: document.getElementById('l-nombre').value.trim(),
+          EMPRESA: document.getElementById('l-empresa').value.trim(),
+          TELEFONO: document.getElementById('l-telefono').value.trim(),
+          RESULTADO_TEST: document.getElementById('lead-resultado').value,
+          IMPORTE: imp ? TXT.importe[imp.value].replace(/^[^:]+: /, '') : '',
+          FINALIDAD: fin ? TXT.finalidad[fin.value].replace(/^[^:]+: /, '') : ''
+        });
         lead.hidden = true;
         document.getElementById('lead-ok').hidden = false;
       })
@@ -532,6 +542,7 @@ var oferta = '<div class="oferta"><p><strong>¿Cuánto podría pedir tu empresa?
   });
 })();
 </script>
+<script src="../assets/brevo-lead.js" defer></script>
 <script src="../assets/nav.js" defer></script>
 <script src="../assets/reveal.js" defer></script>
 </body>
