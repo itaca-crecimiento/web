@@ -968,6 +968,13 @@
         return;
       }
       var data = new FormData(form);
+      // Asunto único por envío para que Gmail no agrupe los formularios en una conversación
+      (function () {
+        var d = new Date(), dos = function (n) { return (n < 10 ? '0' : '') + n; };
+        var quien = [(data.get('empresa') || '').trim(), (data.get('nombre') || '').trim()].filter(Boolean);
+        var txt = quien.length === 2 ? quien[0] + ' (' + quien[1] + ')' : (quien[0] || '');
+        data.set('_subject', 'Consulta ICO Crecimiento' + (txt ? ' – ' + txt : '') + ' – ' + dos(d.getDate()) + '/' + dos(d.getMonth() + 1) + ' ' + dos(d.getHours()) + ':' + dos(d.getMinutes()));
+      })();
       var endpoint = form.getAttribute('data-endpoint');
 
       if (endpoint) {

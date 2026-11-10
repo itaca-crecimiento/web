@@ -500,6 +500,12 @@ var oferta = '<div class="oferta"><p><strong>¿Cuánto podría pedir tu empresa?
   document.getElementById('wa-link').addEventListener('click', function () {
     evento('contacto_whatsapp', { resultado: ultimoTipo });
   });
+  function asuntoUnico(base, empresa, nombre) {
+    var d = new Date(), dos = function (n) { return (n < 10 ? '0' : '') + n; };
+    var quien = [(empresa || '').trim(), (nombre || '').trim()].filter(Boolean);
+    var txt = quien.length === 2 ? quien[0] + ' (' + quien[1] + ')' : (quien[0] || '');
+    return base + (txt ? ' – ' + txt : '') + ' – ' + dos(d.getDate()) + '/' + dos(d.getMonth() + 1) + ' ' + dos(d.getHours()) + ':' + dos(d.getMinutes());
+  }
   var lead = document.getElementById('lead-form');
   var lerr = document.getElementById('lead-error');
   lead.addEventListener('submit', function (e) {
@@ -516,7 +522,10 @@ var oferta = '<div class="oferta"><p><strong>¿Cuánto podría pedir tu empresa?
     }
     var btn = lead.querySelector('button[type="submit"]');
     btn.disabled = true; btn.textContent = 'Enviando…';
-    fetch(lead.getAttribute('data-endpoint'), { method: 'POST', body: new FormData(lead), headers: { 'Accept': 'application/json' } })
+    // Asunto único por envío (empresa, nombre, fecha y hora) para que Gmail no agrupe los formularios en una conversación
+    var datos = new FormData(lead);
+    datos.set('_subject', asuntoUnico(document.getElementById('lead-subject').value, datos.get('empresa'), datos.get('nombre')));
+    fetch(lead.getAttribute('data-endpoint'), { method: 'POST', body: datos, headers: { 'Accept': 'application/json' } })
       .then(function (r) {
         if (!r.ok) throw new Error();
         // Conversión de Google Ads: solo cuando el envío ha llegado bien
